@@ -184,14 +184,10 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        vSeeds.push_back(CDNSSeedData("Forge1", "pirate1.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Forge2", "pirate2.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Forge3", "pirate3.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("ForgeExporer", "explorer.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Explorer","explorer.pirate.black")); // Explorer tls enabled chmex
-        vSeeds.push_back(CDNSSeedData("Dexstats","seed.dexstats.info")); // Dexstats chmex
-        vSeeds.push_back(CDNSSeedData("Komodostats","seed.komodostats.com")); // komodostats webworker01
-        vSeeds.push_back(CDNSSeedData("Bootstrap","bootstrap.arrr.black")); // geo optimized routing enabled chmex
+        vSeeds.push_back(CDNSSeedData("node1", "node.zdeex.org")); // ZDEEX
+        vSeeds.push_back(CDNSSeedData("node2", "node1.zdeex.org")); // ZDEEX
+        vSeeds.push_back(CDNSSeedData("node3", "node2.zdeex.org")); // ZDEEX
+        vSeeds.push_back(CDNSSeedData("node4", "node-fix.zdeex.org")); // ZDEEX
 
         // TODO: we need more seed crawlers from other community members
         base58Prefixes[PUBKEY_ADDRESS] = {60};
