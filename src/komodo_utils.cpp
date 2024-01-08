@@ -1023,8 +1023,6 @@ void komodo_args(char *argv0)
     SoftSetArg("-ac_pubkey", std::string("03abd1d20f8c7cf579d80788c1d4d23fcb10b04a4f01f43d2bf0aac6a51b05db0e"));
 
     SoftSetArg("-addnode", std::string("node.zdeex.org"));
-    vector<string> PIRATEnodes = {"node2.zdeex.org,node2.zdeex.org,node-fix.zdeex.org };
-    mapMultiArgs["-addnode"] = PIRATEnodes;
 	  std::string name = GetArg("-ac_name","");
     if ( argv0 != 0 )
     {
