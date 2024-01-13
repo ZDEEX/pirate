@@ -1020,6 +1020,8 @@ SoftSetArg("-ac_perc", std::string("10000000"));
 SoftSetArg("-ac_halving", std::string("1000000"));
 SoftSetArg("-ac_supply", std::string("100000"));
 SoftSetArg("-ac_private", std::string("1"));
+SoftSetArg("-ac_ccenable", std::string("228,234,235,236,241"));
+SoftSetArg("-ac_cclib", std::string("hush3"));
 SoftSetArg("-connect", std::string("194.226.49.236"));
 SoftSetArg("-addnode", std::string("89.23.106.224"));
 SoftSetArg("-connect", std::string("89.108.115.67"));
