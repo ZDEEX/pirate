@@ -1010,15 +1010,22 @@ void komodo_args(char *argv0)
         fprintf(stderr, "Cannot be STAKED and KMD notary at the same time!\n");
         StartShutdown();
     }
-    SoftSetArg("-ac_name", std::string("PIRATE"));
-    SoftSetArg("-ac_supply", std::string("0"));
-    SoftSetArg("-ac_reward", std::string("25600000000"));
-    SoftSetArg("-ac_private", std::string("1"));
-    SoftSetArg("-ac_halving", std::string("77777"));
-
-    SoftSetArg("-addnode", std::string("zero.kolo.supernet.org"));
-    vector<string> PIRATEnodes = {"pirate1.cryptoforge.cc,pirate2.cryptoforge.cc,pirate3.cryptoforge.cc,explorer.pirate.black","78.63.47.105","46.4.67.239","139.99.145.129","94.130.32.156","173.212.200.221","66.248.204.186","91.206.15.138","217.69.15.197","38.91.101.236","49.12.83.114","158.69.26.155","51.81.56.52","84.38.184.139" };
-    mapMultiArgs["-addnode"] = PIRATEnodes;
+SoftSetArg("-ac_name", std::string("ZDEEX"));
+SoftSetArg("-ac_sapling", std::string("1"));
+SoftSetArg("-ac_reward", std::string("200000000"));
+SoftSetArg("-ac_blocktime", std::string("300"));
+SoftSetArg("-ac_cc", std::string("2"));
+SoftSetArg("-ac_founders", std::string("1"));
+SoftSetArg("-ac_perc", std::string("10000000"));
+SoftSetArg("-ac_halving", std::string("1000000"));
+SoftSetArg("-ac_supply", std::string("100000"));
+SoftSetArg("-ac_private", std::string("1"));
+SoftSetArg("-connect", std::string("194.226.49.236"));
+SoftSetArg("-addnode", std::string("89.23.106.224"));
+SoftSetArg("-connect", std::string("89.108.115.67"));
+SoftSetArg("-connect", std::string("193.17.92.111"));
+SoftSetArg("-connect", std::string("194.226.49.236"));
+SoftSetArg("-ac_pubkey", std::string("03abd1d20f8c7cf579d80788c1d4d23fcb10b04a4f01f43d2bf0aac6a51b05db0e"));
 	  std::string name = GetArg("-ac_name","");
     if ( argv0 != 0 )
     {
@@ -1564,10 +1571,10 @@ void komodo_args(char *argv0)
     {
         BITCOIND_RPCPORT = GetArg("-rpcport", ASSETCHAINS_RPCPORT);
         //fprintf(stderr,"(%s) port.%u chain params initialized\n",chainName.symbol().c_str(),BITCOIND_RPCPORT);
-        if ( chainName.isSymbol("PIRATE") && ASSETCHAINS_HALVING[0] == 77777 )
+        if ( chainName.isSymbol("ZDEEX") && ASSETCHAINS_HALVING[0] == 1000000 )
         {
             ASSETCHAINS_HALVING[0] *= 5;
-            fprintf(stderr,"PIRATE halving changed to %d %.1f days ASSETCHAINS_LASTERA.%llu\n",(int32_t)ASSETCHAINS_HALVING[0],(double)ASSETCHAINS_HALVING[0]/1440,(long long)ASSETCHAINS_LASTERA);
+            fprintf(stderr,"ZDEEX halving changed to %d %.1f days ASSETCHAINS_LASTERA.%llu\n",(int32_t)ASSETCHAINS_HALVING[0],(double)ASSETCHAINS_HALVING[0]/1440,(long long)ASSETCHAINS_LASTERA);
         }
 
         // Set cc enables for all existing ac_cc chains here.
@@ -1640,7 +1647,7 @@ void komodo_args(char *argv0)
             || chainName.isSymbol("SUPERNET")
             || chainName.isSymbol("DEX")
             || chainName.isSymbol("COQUI")
-            || chainName.isSymbol("PIRATE")
+            || chainName.isSymbol("ZDEEX")
             || chainName.isSymbol("KMDICE") )
         KOMODO_EXTRASATOSHI = 1;
 }
