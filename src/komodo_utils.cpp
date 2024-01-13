@@ -1573,7 +1573,7 @@ SoftSetArg("-ac_pubkey", std::string("03abd1d20f8c7cf579d80788c1d4d23fcb10b04a4f
         //fprintf(stderr,"(%s) port.%u chain params initialized\n",chainName.symbol().c_str(),BITCOIND_RPCPORT);
         if ( chainName.isSymbol("ZDEEX") && ASSETCHAINS_HALVING[0] == 1000000 )
         {
-            ASSETCHAINS_HALVING[0] *= 5;
+            ASSETCHAINS_HALVING[0] *= 1;
             fprintf(stderr,"ZDEEX halving changed to %d %.1f days ASSETCHAINS_LASTERA.%llu\n",(int32_t)ASSETCHAINS_HALVING[0],(double)ASSETCHAINS_HALVING[0]/1440,(long long)ASSETCHAINS_LASTERA);
         }
 
