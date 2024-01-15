@@ -120,19 +120,19 @@ public:
             if (settings.value("strTheme", "armada").toString() == "dark") {
                 foreground = COLOR_POSITIVE_DARK;
             } else if (settings.value("strTheme", "armada").toString() == "zdeex") {
-                foreground = COLOR_POSITIVE_PIRATE;
+                foreground = COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "zdeexmap") {
-                foreground = COLOR_POSITIVE_PIRATE;
+                foreground = COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "armada") {
-                foreground = COLOR_POSITIVE_PIRATE;
+                foreground = COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "treasure") {
-                foreground = COLOR_POSITIVE_PIRATE;
+                foreground = COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "treasuremap") {
-                foreground = COLOR_POSITIVE_PIRATE;
+                foreground = COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "ghostship") {
-                foreground = COLOR_POSITIVE_PIRATE;
+                foreground = COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "night") {
-                foreground = COLOR_POSITIVE_PIRATE;
+                foreground = COLOR_POSITIVE_ZDEEX;
             } else {
                 foreground = COLOR_POSITIVE;
             }

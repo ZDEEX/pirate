@@ -166,9 +166,9 @@ To run the daemon for ZDEEX Chain:
 `zdeexd`
 both zdeexd and zdeex-cli are located in the src directory after successfully building  
 
-To reset the ZDEEX Chain blockchain change into the *~/.komodo/PIRATE* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log` and restart daemon
+To reset the ZDEEX Chain blockchain change into the *~/.komodo/ZDEEX* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log` and restart daemon
 
-To initiate a bootstrap download on the GUI wallet add bootstrap=1 to the PIRATE.conf file.
+To initiate a bootstrap download on the GUI wallet add bootstrap=1 to the ZDEEX.conf file.
 
 
 **ZDEEX is based on Komodo which is unfinished and highly experimental.** Use at your own risk.

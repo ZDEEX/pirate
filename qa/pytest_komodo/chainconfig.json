@@ -41,13 +41,13 @@
     "rpcport": 7000,
     "rpcbind": "0.0.0.0"
     },
-  "PIRATE": {
+  "ZDEEX": {
     "rpc_user": "test",
     "rpcpassword": "test",
     "rpcallowip": "0.0.0.0/0",
     "rpcport": 7000,
     "rpcbind": "0.0.0.0",
-    "ac_name": "PIRATE",
+    "ac_name": "ZDEEX",
     "ac_supply": "0",
     "ac_reward": "25600000000",
     "ac_halving": "77777",

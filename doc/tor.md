@@ -1,4 +1,4 @@
-# TOR SUPPORT IN PIRATE
+# TOR SUPPORT IN ZDEEX
 
 It is possible to run ZDEEX as a Tor onion service, and connect to such services.
 

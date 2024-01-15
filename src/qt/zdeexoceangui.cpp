@@ -614,7 +614,7 @@ void ZDEEXOceanGUI::setColdStorageLayout( )
         
         //If the offline role is enabled, the wallet shouldn't have internet access,
         //for security reasons. The wallet should not attempt to sync with the blockchain.
-        //This can be accomplished by editing PIRATE.conf and setting maxconnections=0.
+        //This can be accomplished by editing ZDEEX.conf and setting maxconnections=0.
         //Alternatively, the number of connections are override here when "Signing"
         //is enabled:
         if (fEnableZSigning_ModeSign==true) 

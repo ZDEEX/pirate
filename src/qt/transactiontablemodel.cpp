@@ -765,19 +765,19 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
             if (settings.value("strTheme", "armada").toString() == "dark") {
                 return COLOR_POSITIVE_DARK;
             } else if (settings.value("strTheme", "armada").toString() == "zdeex") {
-                return COLOR_POSITIVE_PIRATE;
+                return COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "zdeexmap") {
-                return COLOR_POSITIVE_PIRATE;
+                return COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "armada") {
-                return COLOR_POSITIVE_PIRATE;
+                return COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "treasure") {
-                return COLOR_POSITIVE_PIRATE;
+                return COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "treasuremap") {
-                return COLOR_POSITIVE_PIRATE;
+                return COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "ghostship") {
-                return COLOR_POSITIVE_PIRATE;
+                return COLOR_POSITIVE_ZDEEX;
             } else if (settings.value("strTheme", "armada").toString() == "night") {
-                return COLOR_POSITIVE_PIRATE;
+                return COLOR_POSITIVE_ZDEEX;
             } else {
                 return COLOR_POSITIVE;
             }

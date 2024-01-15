@@ -30,7 +30,7 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Transaction list -- positive amount */
 #define COLOR_POSITIVE_DARK QColor(76, 178, 76)
 /* Transaction list -- positive amount */
-#define COLOR_POSITIVE_PIRATE QColor(25, 225, 25)
+#define COLOR_POSITIVE_ZDEEX QColor(25, 225, 25)
 /* Transaction list -- bare address (without label) */
 #define COLOR_BAREADDRESS QColor(140, 140, 140)
 /* Transaction list -- TX status decoration - open until date */

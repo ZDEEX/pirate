@@ -736,7 +736,7 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp, const CPubKey& myp
     }
 
     // currently we have checkpoints only in KMD chain, so we checking IsInitialBlockDownload only for KMD itself
-    if (chainName.isSymbol("PIRATE") && IsInitialBlockDownload()) {
+    if (chainName.isSymbol("ZDEEX") && IsInitialBlockDownload()) {
         throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "ZDEEX is downloading blocks...");
     }
 

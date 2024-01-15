@@ -168,7 +168,7 @@ shortfalls:
   Treasure chest will create two sub directories in your $HOME directory where all 
   the data is stored:
       ~/.zcash-params  -- Contains ZKsnark network parameters
-      ~/.komodo/PIRATE -- Contains your wallet and the blockchain
+      ~/.komodo/ZDEEX -- Contains your wallet and the blockchain
       
   Note: Significant improvements were made in version 5.6, that is not compatible
         with 5.5 or older. As soon as it's out of 'dev' and officially released we
@@ -181,7 +181,7 @@ shortfalls:
     The download is 750mb and will be located in $HOME/.zcash-params
     On a 10mbps link it takes about 10 minutes to download.
     
-    With no files present in the ~/.komodo/PIRATE directory the application will ask
+    With no files present in the ~/.komodo/ZDEEX directory the application will ask
     a couple of setup questions:
     1. A popup appears with the title: New installation is detected.
        The dialog asks if you want to run in online mode or offline mode.
@@ -227,9 +227,9 @@ shortfalls:
        contain any data.
 
 4.3 Blockchain bootstrap
-    On a terminal console, navigate to $HOME/.komodo/PIRATE.
+    On a terminal console, navigate to $HOME/.komodo/ZDEEX.
          $ cd ~
-         $ cd .komodo/PIRATE
+         $ cd .komodo/ZDEEX
     Remove the newly created blockchain files
          $ rm -rf blocks
          $ rm -rf chainstate
@@ -277,7 +277,7 @@ shortfalls:
     From a terminal console, run the application: zdeex-qt
     The application will load the provided ZKsnark network parameters.
     
-    With no config files in the ~/.komodo/PIRATE directory the application will ask
+    With no config files in the ~/.komodo/ZDEEX directory the application will ask
     a couple of setup questions:
     1. A popup appears with the title: New installation is detected.
        The dialog asks if you want to run in online mode or offline mode.
@@ -327,7 +327,7 @@ shortfalls:
    to make transactions again.
    
 7. Changes from the previous Treasure Chest version
-   Previously you had to manually edit the PIRATE.conf file in the
+   Previously you had to manually edit the ZDEEX.conf file in the
    project home directory to enable the 'offline mode' of the 
    application. This was accomplished by setting the config entry:
    maxconnections=0.

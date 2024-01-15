@@ -950,7 +950,7 @@ std::string HelpExampleCli(const std::string& methodname, const std::string& arg
 {
     if ( chainName.isKMD() ) {
         return "> komodo-cli " + methodname + " " + args + "\n";
-    } else if (chainName.isSymbol("PIRATE")) {
+    } else if (chainName.isSymbol("ZDEEX")) {
         return "> zdeex-cli " + methodname + " " + args + "\n";
     } else {
         return "> komodo-cli -ac_name=" + strprintf("%s", chainName.symbol().c_str()) + " " + methodname + " " + args + "\n";
@@ -968,7 +968,7 @@ string experimentalDisabledHelpMsg(const string& rpc, const string& enableArg)
     string daemon = "komodod";
     string ticker = chainName.isKMD() ? "komodo" : chainName.symbol();
 
-    if (chainName.isSymbol("PIRATE")) {
+    if (chainName.isSymbol("ZDEEX")) {
         daemon = "zdeexd";
     }
 

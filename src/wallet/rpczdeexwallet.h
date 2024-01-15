@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_RPCPIRATEWALLET_H
-#define BITCOIN_WALLET_RPCPIRATEWALLET_H
+#ifndef BITCOIN_WALLET_RPCZDEEXWALLET_H
+#define BITCOIN_WALLET_RPCZDEEXWALLET_H
 
 struct balancestruct {
   CAmount confirmed;

@@ -1890,7 +1890,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     bool newInstall = false;
 
 
-    //Parameter set on initial creation of PIRATE.conf.
+    //Parameter set on initial creation of ZDEEX.conf.
     newInstall = GetBoolArg("-setup_cold_storage", false);
 
     //Prompt on new install: Cold storage or normal operation?
@@ -1904,14 +1904,14 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
             useBootstrap = false;
 
             //Note: By this time the GUI configuration files: 'ZDEEX Chain/Treasure\ Chest.conf' and
-            //      PIRATE.conf is already created. We'll have to update the GUI configuration from
+            //      ZDEEX.conf is already created. We'll have to update the GUI configuration from
             //      the UI code
         }
     }
 
     if (nMaxConnections>0) //Online mode
     {
-        //Note: 'bootstrapinstall' also set when PIRATE.conf is created
+        //Note: 'bootstrapinstall' also set when ZDEEX.conf is created
         newInstall = GetBoolArg("-bootstrapinstall", false);
         if (!boost::filesystem::exists(GetDataDir() / "blocks") || !boost::filesystem::exists(GetDataDir() / "chainstate"))
             newInstall = true;

@@ -184,14 +184,9 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        vSeeds.push_back(CDNSSeedData("Forge1", "zdeex1.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Forge2", "zdeex2.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Forge3", "zdeex3.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("ForgeExporer", "explorer.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Explorer","explorer.zdeex.black")); // Explorer tls enabled chmex
-        vSeeds.push_back(CDNSSeedData("Dexstats","seed.dexstats.info")); // Dexstats chmex
-        vSeeds.push_back(CDNSSeedData("Komodostats","seed.komodostats.com")); // komodostats webworker01
-        vSeeds.push_back(CDNSSeedData("Bootstrap","bootstrap.arrr.black")); // geo optimized routing enabled chmex
+        vSeeds.push_back(CDNSSeedData("Zdeex1", "node.zdeex.org")); // Zdeex
+        vSeeds.push_back(CDNSSeedData("Zdeex2", "node1.zdeex.org")); // Zdeex
+        vSeeds.push_back(CDNSSeedData("Zdeex3", "node2.zdeex.org")); // Zdeex
 
         // TODO: we need more seed crawlers from other community members
         base58Prefixes[PUBKEY_ADDRESS] = {60};
@@ -724,48 +719,41 @@ void *chainparams_commandline()
                         //   total number of tx / (checkpoint block height / (24 * 24))
                 };
 
-        if (chainName.isSymbol("PIRATE"))
+        if (chainName.isSymbol("ZDEEX"))
         {
-            pCurrentParams->consensus.vUpgrades[Consensus::UPGRADE_SAPLING].nActivationHeight = 152855;
-            pCurrentParams->consensus.vUpgrades[Consensus::UPGRADE_OVERWINTER].nActivationHeight = 152855;
             checkpointData = //(Checkpoints::CCheckpointData)
                     {
                             boost::assign::map_list_of
                                     (0, pCurrentParams->consensus.hashGenesisBlock)
-                                    (10000, uint256S("0x000001361458d9514816fcaed16c8dfd007f57012e7be6ff8ee6bebec1cb3679"))
-                                    (100000, uint256S("0x0000000085ba91a4ef72274aa1e549399e9cda0c3f7070ea612d2a45007bdfe7"))
-                                    (200000, uint256S("0x0000000097934aab530005e99148224c3c863f2c785e4934645972dd7c611f70"))
-                                    (300000, uint256S("0x000000001598dc03f64b36169a482dfa3d85a10d42cde06aa6cc6a75707389b2"))
-                                    (400000, uint256S("0x000000001352818dcd2bc7e348492b3e56cb271c916f1b66a8a90ceda3d9fbe9"))
-                                    (500000, uint256S("0x000000004a7eeb2b19dc893030a233e27be847597a274f65eab9a3234d296b81"))
-                                    (600000, uint256S("0x00000000b260ab44b2f41b1bb759ae8b1b20022bd43a1c1240bb6bd3c83ee2e6"))
-                                    (700000, uint256S("0x000000002db31fb7f11a33614ef482797cb3102d1e262aeda13b1de548a7eace"))
-                                    (800000, uint256S("0x00000000c9a88eb08320fb87edd6e4bf3bfe94f51b0580e36229c781c50c8d4b"))
-                                    (900000, uint256S("0x00000000df520299974b31272c8f3d8730a4bbc937ceead899fa97d0ce47282a"))
-                                    (1000000, uint256S("0x000000005ba1dab60631d4215aaf814151b20a38f33fde0dca014fefcc2c85d4"))
-                                    (1100000, uint256S("0x000000007fef990ae987b44d35bce4daae6a67d021bf853a38ecc4560cffd10c"))
-                                    (1200000, uint256S("0x0000000015d119c13493372848b3ffbaeb8de486d6f28cd5040cea5af2cd3675"))
-                                    (1300000, uint256S("0x000000001428f2e99327a47761b0da3d3b7a8921ca57765329bbad011348ec0e"))
-                                    (1400000, uint256S("0x0000000000a011d156e423a6e9dcc96705c5b7157cc0efef12120ad26370f22a"))
-                                    (1500000, uint256S("0x0000000003966e23bb72162a84d2ba0bd4ca5dbf12c4201e79629719725bc05e"))
-                                    (1600000, uint256S("0x0000000002838d76f769cd7bb87bb196ebe0556750fb14b038eb149a31b5aeb3"))
-                                    (1700000, uint256S("0x000000000a6999bede4901e9d07de66fafbd5a81c18b038d205960887b0b522a"))
-                                    (1800000, uint256S("0x000000000e69ec04a4c9ebaba913f844d159c7f308da85626804f8ff295a7c74"))
-                                    (1900000, uint256S("0x00000000176a6f8ebd5d3833345b0b9e68a389e2f1077071a72383b73b7f7944"))
-                                    (2000000, uint256S("0x000000000c56ec1237cb98457510ee3144120e0af977d39ded7b34dd0c22f5ab"))
-                                    (2100000, uint256S("0x00000000189c3d02a97c9ed45c194d5ae9a7723598af640f268cfdbf59a69cbb"))
-                                    (2200000, uint256S("0x00000000215d10231183f53550314c915d3119bb3782ae717fca498f97c3b1e4"))
-                                    (2300000, uint256S("0x000000002f81899792792c294ae4e313bd9e07b8522df23d5d49e6c13c8ca7d4"))
-                                    (2400000, uint256S("0x0000000038f671599a462b3faa16e597b6bfd4f7e0dd78aa4707b0a0e828f70b"))
-                                    (2459242, uint256S("0x00000000acfcfed7e72cc3489f4e63030493647887e2b7d36dc1e5c123a5b690")),
-                            (int64_t)1688106389,    // * UNIX timestamp of last checkpoint block
-                            (int64_t)5043793,         // * total number of transactions between genesis and last checkpoint
-                            //   (the tx=... number in the SetBestChain debug.log lines)
-                            (double)1179           // * estimated number of transactions per day after checkpoint
-                            //   total number of tx / (checkpoint block height / (24 * 24))
-                    };
+                                    (228,     uint256S("0x01141d371e372eae75a2cacf8ba462946da8fc9a6a0044571f4140509f9b3ed1"))
+                                    (456,     uint256S("0x000feea82f7019a7ec7f9f5cf8153c17dd5244dbd7a1bb2e47c5a6c4310794cd"))
+                                    (684,     uint256S("0x000046d48dd709ccc3fb18d1d41dd22e064b274a92ab2b102c94aa5f1d22cc49"))
+                                    (912,     uint256S("0x0000046f943000963076a62fcce32c32372c82b5fea6cf0491bcbfd37b954b2a"))
+                                    (1140,     uint256S("0x00000166eb8bb13d291bd8536b450cdadf1a22321bab737b93ca973809f24992"))
+                                    (1368,     uint256S("0x000004132b43b47244b70360f73165e7f87a5cdc6c8100d9fdd4217773efa1d3"))
+                                    (1596,     uint256S("0x0000002233e5afabf4d4aa8a486040a06dbf487950c72816fe2db29d7dbe5087"))
+                                    (1824,     uint256S("0x000001c17f264860b757b0d64018fa9840e72c992461b5c8994b1dbbe637ab31"))
+                                    (2052,     uint256S("0x0000000d1239f1e750b004f46e28f322cd82d8d93355c986ebfff939143098ba"))
+                                    (2280,     uint256S("0x00000007620ad38ce369cfa55cd97f25d9d4c364a6211ab40d8d5a45cf10a32a"))
+                                    (2508,     uint256S("0x0000000015f879b82af27cfb5e7dc9bee6fb53b11c3ef24067e5b25ef4afe6a5"))
+                                    (2736,     uint256S("0x000000000e622d44b7adb83e97e737cd894bd4bbd5987a0b7aa24b4fa67d6168"))
+                                    (2964,     uint256S("0x000000001b987cd7f3d197c5aee60397715bd528f6e1060ac4fa7c1631334cdb"))
+                                    (3192,     uint256S("0x0000000030ae3e71eb5df97da761acaa42805e5528413969be051f8e6aeda6fe"))
+                                    (3420,     uint256S("0x0000000018ba241ddb3d5d89f1cd8c01956c9dceafeb82c9a2a9dc672fcff4fb"))
+                                    (3648,     uint256S("0x000000001aee472d3c2845844855c8a421fecd516c43d7b6c878e5372c203fc4"))
+                                    (3876,     uint256S("0x00000000de28456b04b5bdd28d24a32a1f774ad8b06efbf7399ece10cb0b859e"))
+                                    (4104,     uint256S("0x00000000728634f2f869d83bad6de73582d50e1ae6f9e414e6309e8a102485cc"))
+                                    (4332,     uint256S("0x000000001628fdc1048da3b9016c386dfe45ac9a50406aaec6f9c3c47c2b86b9"))
+                                    (4560,     uint256S("0x000000005c147c1ab4208fbc482197c35813bca535c147632b014ed111d1eaaf"))
+                                    (4788,     uint256S("0x00000000338e7a02661b6ca5c65a82141e8ffef3f12678c0249ae4772ecb8524"))
+                                    (5016,     uint256S("0x00000000348b101595c45373cfb9796d748e20fe5c0849fd2d6e6f3cd6aa222a"))
+                                    (5244,     uint256S("0x000000006d1eb0107e8106f5d57995d7edb35b8d01fd611997f4246c2a838c3a"))
+                                    (5472,     uint256S("0x00000000601d337d6ae950ec03fe3c9eb5e65f748efce751edc7d2bc4886414b")),
+                                    (int64_t)  1704659124, // time of last checkpointed block
+                                    (int64_t) 7711,      // total txs
+                                    (double)  576        // txs in the last day before block 5485
+                                    };
 
-            pCurrentParams->consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000c46a0c07176634");
 
         }
 

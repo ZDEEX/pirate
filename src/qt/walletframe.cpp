@@ -72,7 +72,7 @@ bool WalletFrame::addWallet(const QString& name, WalletModel *walletModel)
         //This is the first run of the new wallet
         if (nMaxConnections==0)
         {
-            // Default configuration files for the QT GUI & server (PIRATE.conf)
+            // Default configuration files for the QT GUI & server (ZDEEX.conf)
             // was already created prior to reaching this point.
         
             //In init.cpp a dialog asked if an online or cold storage offline
