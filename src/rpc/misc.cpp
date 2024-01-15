@@ -83,7 +83,7 @@ uint64_t komodo_notarypayamount(int32_t nHeight, int64_t notarycount);
 int32_t komodo_notaries(uint8_t pubkeys[64][33],int32_t height,uint32_t timestamp);*/
 
 #define KOMODO_VERSION "0.8.0"
-#define ZDEEX_VERSION "5.7.5"
+#define PIRATE_VERSION "5.7.5"
 extern uint16_t ASSETCHAINS_P2PPORT,ASSETCHAINS_RPCPORT;
 extern uint32_t ASSETCHAINS_CC;
 extern uint32_t ASSETCHAINS_MAGIC,ASSETCHAINS_ALGO;
@@ -261,7 +261,7 @@ UniValue getinfo(const UniValue& params, bool fHelp, const CPubKey& mypk)
     obj.push_back(Pair("version", CLIENT_VERSION));
     obj.push_back(Pair("protocolversion", PROTOCOL_VERSION));
     obj.push_back(Pair("KMDversion", KOMODO_VERSION));
-    obj.push_back(Pair("ZDEEXversion", ZDEEX_VERSION));
+    obj.push_back(Pair("PIRATEversion", PIRATE_VERSION));
     obj.push_back(Pair("ZDEEXversion", CLIENT_BUILD));
     obj.push_back(Pair("synced", KOMODO_INSYNC!=0));
     obj.push_back(Pair("notarized", notarized_height));
