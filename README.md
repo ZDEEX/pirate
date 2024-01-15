@@ -1,46 +1,45 @@
-![ZDEEX cli build - Ubuntu 18.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20Ubuntu%2018.04/badge.svg)\
+![ZDEEX gt build - Ubuntu 20.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20qt%20build%20-%20Ubuntu%2020.04/badge.svg)\
 ![ZDEEX cli build - Ubuntu 20.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20Ubuntu%2020.04/badge.svg)\
-![ZDEEX cli build - Windows cross compile 18.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20Windows%20cross%20compile%2018.04/badge.svg)\
+![ZDEEX qt build - Windows cross compile 20.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20qt%20build%20-%20Windows%20cross%20compile%2020.04/badge.svg)\
 ![ZDEEX cli build - Windows cross compile 20.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20Windows%20cross%20compile%2020.04/badge.svg)\
-![ZDEEX cli build - MacOS 10.15 Catalina](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20MacOS/badge.svg)\
-![ZDEEX Logo](https://i.ibb.co/F7Dgnxy/ZDEEX-Logo-Wordmark-Gold.png "ZDEEX Chain Logo")
+![ZDEEX Logo](https://zdeex.org/a9290064-86a9-4902-911e-bd1f12c6f64e.jpg "ZDEEX Chain Logo")
 
 
 ## ZDEEX Chain
 
-This is the official ZDEEX Chain sourcecode repository based on https://github.com/jl777/komodo.
+This is the official ZDEEX Chain sourcecode repository based on [pirate](https://github.com/PirateNetwork/pirate) and [komodo](https://github.com/KomodoPlatform/komodo).
 
 ## Development Resources
 
 - ZDEEX Chain Website: [https://zdeex.black](https://zdeex.black/)
 - Komodo Platform: [https://komodoplatform.com](https://komodoplatform.com/)
-- ZDEEX Blockexplorer: [https://explorer.zdeex.black](https://zdeex.black/)
-- ZDEEX Discord: [https://zdeex.black/discord](https://zdeex.black/discord)
-- BTT ANN: [https://bitcointalk.org/index.php?topic=4979549.0](https://bitcointalk.org/index.php?topic=4979549.0/)
-- Mail: [marketing@zdeex.black](mailto:marketing@zdeex.black)
-- Support: [https://zdeex.black/discord](https://zdeex.black/discord)
-- API references & Dev Documentation: [https://docs.zdeex.black](https://docs.zdeex.black/)
-- Blog: [https://zdeex.black/blog](https://zdeex.black/blog/)
-- Whitepaper: [ZDEEX Chain Whitepaper](https://zdeex.black/whitepaper)
+- Pirate Platform: [https://piratechain.com/](https://piratechain.com/)
+- ZDEEX Blockexplorer: [https://explorer.zdeex.org](https://explorer.zdeex.org/)
+- ZDEEX Discord: [https://discord.gg/ezHAQDZumS](https://discord.gg/ezHAQDZumS)
+- ZDEEX Telegram: [https://t.me/zdeexcoin](https://t.me/zdeexcoin)
+- Support: [discord](https://discord.gg/ezHAQDZumS)
+- Whitepaper: [ZDEEX Chain Whitepaper](https://zdeex.org)
 
 ## Komodo Platform Technologies Integrated In ZDEEX Chain
 
-- Delayed Proof of Work (dPoW) - Additional security layer and Komodos own consensus algorithm  
+- Delayed Proof of Work (dPoW) - Additional security layer and Komodos own consensus algorithm (SOON)  
 - zk-SNARKs - Komodo Platform's privacy technology for shielded transactions  
 
 
 ## Tech Specification
-- Max Supply: 200 million ZDEEX
-- Block Time: 60s
-- Block Reward: 256 ZDEEX
-- Mining Algorithm: Equihash 200,9
+- Max Supply: 5.000.000 ZDEEX
+- Block Time: 300 seconds
+- Starting Block Reward: 2.2 ZDEEX (0.2 ZDEEX The Project Fund)
+- Mining Specifics: 100% PoW
+- Mining Algorithm: Equihash (200,9)
+- P2p port: 65104
+- Rpc port: 65105
+- Premine: 100000
 
 ## About this Project
-ZDEEX Chain (ZDEEX) is a 100% private send cryptocurrency. It uses a privacy protocol that cannot be compromised by other users activity on the network. Most privacy coins are riddled with holes created by optional privacy. ZDEEX Chain uses zk-SNARKs to shield 100% of the peer to peer transactions on the blockchain making for highly anonymous and private transactions.
+ZDEEX Network is a 100% Private, private, decentralized blockchain Our network uses the Zerocash protocol, which ensures the confidentiality of transaction metadata. The codebase is based on Hush, Komodo and Zcash 2.0 ZDEEX Network - applies 100% Sapling transactions. Your private sending transactions cannot be compromised by the activity of other users on our network. This is 100% privacy ZDEEX Network supports the TOR Network Based on the resulting ZDEEX Network platform, the ZDEEX development team, together with invited specialists and consultants from other well-known projects , is working on the creation of a decentralized exchange, a centralized exchange, the integration of a messenger and a wallet for storing crypto assets in android. More detailed information and the latest news can be tracked on our website, the official discord and Telegram channel.
 
 ## Getting started
-Build the code as described below. To see instructions on how to construct and send an offline transaction look
-at README_offline_transaction_signing.md
 
 A list of outstanding improvements is included in README_todo.md
 
