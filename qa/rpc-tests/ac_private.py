@@ -34,7 +34,7 @@ class AssetChainPrivateTest (BitcoinTestFramework):
 
     def setup_network(self, split = False):
         print("Setting up network...")
-        # These nodes simulate the ARRR asset chain parameters
+        # These nodes simulate the ZDEEX asset chain parameters
         self.nodes   = start_nodes(self.num_nodes, self.options.tmpdir,
                     extra_args=[[
                     # always give -ac_name as first extra_arg and port as third

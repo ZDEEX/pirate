@@ -152,7 +152,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>PirateOceanGUI</name>
+    <name>ZDEEXOceanGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Подписать &amp;сообщение...</translation>
@@ -230,8 +230,8 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>Pirate</source>
-        <translation>Pirate Core</translation>
+        <source>ZDEEX</source>
+        <translation>ZDEEX Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -442,8 +442,8 @@
         <translation>Пробросить порт через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Pirate network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети Pirate через SOCKS5 прокси.</translation>
+        <source>Connect to the ZDEEX network through a SOCKS5 proxy.</source>
+        <translation>Подключится к сети ZDEEX через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -522,8 +522,8 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Enter a Pirate address (e.g. %1)</source>
-        <translation>Введите Pirate-адрес (напр. %1)</translation>
+        <source>Enter a ZDEEX address (e.g. %1)</source>
+        <translation>Введите ZDEEX-адрес (напр. %1)</translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
@@ -834,14 +834,14 @@
     </message>
     </context>
 <context>
-    <name>pirate-core</name>
+    <name>zdeex-core</name>
     <message>
-        <source>Pirate Core</source>
-        <translation>Pirate Core</translation>
+        <source>ZDEEX Core</source>
+        <translation>ZDEEX Core</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
-        <translation>pirate-core</translation>
+        <translation>zdeex-core</translation>
     </message>
     <message>
         <source>Information</source>

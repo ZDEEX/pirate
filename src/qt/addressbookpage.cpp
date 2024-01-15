@@ -10,7 +10,7 @@
 #include "ui_addressbookpage.h"
 
 #include "addresstablemodel.h"
-#include "pirateoceangui.h"
+#include "zdeexoceangui.h"
 #include "csvmodelwriter.h"
 #include "editaddressdialog.h"
 #include "guiutil.h"
@@ -67,12 +67,12 @@ AddressBookPage::AddressBookPage(const PlatformStyle *platformStyle, Mode _mode,
     switch(tab)
     {
     case SendingTab:
-        ui->labelExplanation->setText(tr("These are your Pirate addresses for sending payments. Always check the amount and the receiving address before sending coins."));
+        ui->labelExplanation->setText(tr("These are your ZDEEX addresses for sending payments. Always check the amount and the receiving address before sending coins."));
         ui->labelExplanation->setVisible(false);
         ui->deleteAddress->setVisible(true);
         break;
     case ReceivingTab:
-        ui->labelExplanation->setText(tr("These are your Pirate addresses for receiving payments. It is recommended to use a new receiving address for each transaction."));
+        ui->labelExplanation->setText(tr("These are your ZDEEX addresses for receiving payments. It is recommended to use a new receiving address for each transaction."));
         ui->labelExplanation->setVisible(false);
         ui->deleteAddress->setVisible(false);
         break;

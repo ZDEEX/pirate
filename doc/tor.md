@@ -1,21 +1,21 @@
 # TOR SUPPORT IN PIRATE
 
-It is possible to run Pirate as a Tor onion service, and connect to such services.
+It is possible to run ZDEEX as a Tor onion service, and connect to such services.
 
 The following directions assume you have a Tor proxy running on port 9050. Many distributions default to having a SOCKS proxy listening on port 9050, but others may not. In particular, the Tor Browser Bundle defaults to listening on port 9150. See [Tor Project FAQ:TBBSocksPort](https://www.torproject.org/docs/faq.html.en#TBBSocksPort) for how to properly
 configure Tor.
 
 ## Compatibility
 
-- Starting with version 5.6.0, Pirate only supports Tor version 3 hidden
-  services (Tor v3). Tor v2 addresses are ignored by Pirate Core and neither
+- Starting with version 5.6.0, ZDEEX only supports Tor version 3 hidden
+  services (Tor v3). Tor v2 addresses are ignored by ZDEEX Core and neither
   relayed nor stored.
 
 - Tor removed v2 support beginning with version 0.4.6.
 
-## How to see information about your Tor configuration via Pirate
+## How to see information about your Tor configuration via ZDEEX
 
-There are several ways to see your local onion address in Pirate:
+There are several ways to see your local onion address in ZDEEX:
 - in the debug log (grep for "tor:" or "AddLocal")
 - in the output of RPC `getnetworkinfo` in the "localaddresses" section
 - in the output of the CLI `-netinfo` peer connections dashboard
@@ -26,11 +26,11 @@ information in the debug log about your Tor configuration.
 CLI `-addrinfo` returns the number of addresses known to your node per network
 type, including Tor v2 and v3. This is useful to see how many onion addresses
 are known to your node for `-onlynet=onion` and how many Tor v3 addresses it
-knows when upgrading to Pirate v5.4.3 and up that supports Tor v3 only.
+knows when upgrading to ZDEEX v5.4.3 and up that supports Tor v3 only.
 
-## 1. Run Pirate behind a Tor proxy
+## 1. Run ZDEEX behind a Tor proxy
 
-The first step is running Pirate behind a Tor proxy. This will already anonymize all
+The first step is running ZDEEX behind a Tor proxy. This will already anonymize all
 outgoing connections, but more is possible.
 
     -proxy=ip:port  Set the proxy server. If SOCKS5 is selected (default), this proxy
@@ -65,22 +65,22 @@ outgoing connections, but more is possible.
 
 In a typical situation, this suffices to run behind a Tor proxy:
 
-    ./pirated -proxy=127.0.0.1:9050
+    ./zdeexd -proxy=127.0.0.1:9050
 
-## 2. Automatically create a Pirate onion service
+## 2. Automatically create a ZDEEX onion service
 
-Pirate makes use of Tor's control socket API to create and destroy
+ZDEEX makes use of Tor's control socket API to create and destroy
 ephemeral onion services programmatically. This means that if Tor is running and
-proper authentication has been configured, Pirate automatically creates an
+proper authentication has been configured, ZDEEX automatically creates an
 onion service to listen on. The goal is to increase the number of available
 onion nodes.
 
-This feature is enabled by default if Pirate is listening (`-listen`) and
+This feature is enabled by default if ZDEEX is listening (`-listen`) and
 it requires a Tor connection to work. It can be explicitly disabled with
 `-listenonion=0`. If it is not disabled, it can be configured using the
 `-torcontrol` and `-torpassword` settings.
 
-To see verbose Tor information in the pirated debug log, pass `-debug=tor`.
+To see verbose Tor information in the zdeexd debug log, pass `-debug=tor`.
 
 ### Control Port
 
@@ -108,20 +108,20 @@ DataDirectoryGroupReadable 1
 ### Authentication
 
 Connecting to Tor's control socket API requires one of two authentication
-methods to be configured: cookie authentication or pirated's `-torpassword`
+methods to be configured: cookie authentication or zdeexd's `-torpassword`
 configuration option.
 
 #### Cookie authentication
 
-For cookie authentication, the user running pirated must have read access to
+For cookie authentication, the user running zdeexd must have read access to
 the `CookieAuthFile` specified in the Tor configuration. In some cases this is
 preconfigured and the creation of an onion service is automatic. Don't forget to
-use the `-debug=tor` pirated configuration option to enable Tor debug logging.
+use the `-debug=tor` zdeexd configuration option to enable Tor debug logging.
 
 If a permissions problem is seen in the debug log, e.g. `tor: Authentication
 cookie /run/tor/control.authcookie could not be opened (check permissions)`, it
 can be resolved by adding both the user running Tor and the user running
-pirated to the same Tor group and setting permissions appropriately.
+zdeexd to the same Tor group and setting permissions appropriately.
 
 On Debian-derived systems, the Tor group will likely be `debian-tor` and one way
 to verify could be to list the groups and grep for a "tor" group name:
@@ -138,14 +138,14 @@ stat -c '%G' /run/tor/control.authcookie
 ```
 
 Once you have determined the `${TORGROUP}` and selected the `${USER}` that will
-run pirated, run this as root:
+run zdeexd, run this as root:
 
 ```
 usermod -a -G ${TORGROUP} ${USER}
 ```
 
 Then restart the computer (or log out) and log in as the `${USER}` that will run
-pirated.
+zdeexd.
 
 #### `torpassword` authentication
 
@@ -159,22 +159,22 @@ Manual](https://2019.www.torproject.org/docs/tor-manual.html.en) for more
 details).
 
 
-## 3. Manually create a Pirate onion service
+## 3. Manually create a ZDEEX onion service
 
 You can also manually configure your node to be reachable from the Tor network.
 Add these lines to your `/etc/tor/torrc` (or equivalent config file):
 
-    HiddenServiceDir /var/lib/tor/pirate-service/
+    HiddenServiceDir /var/lib/tor/zdeex-service/
     HiddenServicePort 45452 127.0.0.1:45454
 
 The directory can be different of course, but virtual port numbers should be equal to
-your pirated's P2P listen port (45452 by default), and target addresses and ports
+your zdeexd's P2P listen port (45452 by default), and target addresses and ports
 should be equal to binding address and port for inbound Tor connections (127.0.0.1:45454 by default).
 
-    -externalip=X   You can tell pirate about its publicly reachable addresses using
+    -externalip=X   You can tell zdeex about its publicly reachable addresses using
                     this option, and this can be an onion address. Given the above
                     configuration, you can find your onion address in
-                    /var/lib/tor/pirate-service/hostname. For connections
+                    /var/lib/tor/zdeex-service/hostname. For connections
                     coming from unroutable addresses (such as 127.0.0.1, where the
                     Tor proxy typically runs), onion addresses are given
                     preference for your node to advertise itself with.
@@ -196,29 +196,29 @@ should be equal to binding address and port for inbound Tor connections (127.0.0
 
 In a typical situation, where you're only reachable via Tor, this should suffice:
 
-    ./pirated -proxy=127.0.0.1:9050 -externalip=7zvj7a2imdgkdbg4f2dryd5rgtrn7upivr5eeij4cicjh65pooxeshid.onion -listen
+    ./zdeexd -proxy=127.0.0.1:9050 -externalip=7zvj7a2imdgkdbg4f2dryd5rgtrn7upivr5eeij4cicjh65pooxeshid.onion -listen
 
 (obviously, replace the .onion address with your own). It should be noted that you still
 listen on all devices and another node could establish a clearnet connection, when knowing
 your address. To mitigate this, additionally bind the address of your Tor proxy:
 
-    ./pirated ... -bind=127.0.0.1
+    ./zdeexd ... -bind=127.0.0.1
 
 If you don't care too much about hiding your node, and want to be reachable on IPv4
 as well, use `discover` instead:
 
-    ./pirated ... -discover
+    ./zdeexd ... -discover
 
 and open port 45452 on your firewall (or use port mapping, i.e., `-upnp` or `-natpmp`).
 
 If you only want to use Tor to reach .onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
 
-    ./pirated -onion=127.0.0.1:9050 -externalip=7zvj7a2imdgkdbg4f2dryd5rgtrn7upivr5eeij4cicjh65pooxeshid.onion -discover
+    ./zdeexd -onion=127.0.0.1:9050 -externalip=7zvj7a2imdgkdbg4f2dryd5rgtrn7upivr5eeij4cicjh65pooxeshid.onion -discover
 
 ## 4. Privacy recommendations
 
-- Do not add anything but Pirate ports to the onion service created in section 3.
+- Do not add anything but ZDEEX ports to the onion service created in section 3.
   If you run a web service too, create a new onion service for that.
   Otherwise it is trivial to link them, which may reduce privacy. Onion
   services created automatically (as in section 2) always have only one port

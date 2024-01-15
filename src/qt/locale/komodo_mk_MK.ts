@@ -64,7 +64,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>PirateOceanGUI</name>
+    <name>ZDEEXOceanGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Потпиши &amp;порака...</translation>
@@ -138,16 +138,16 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a Pirate address</source>
-        <translation>Испрати Pirate на Pirate адреса</translation>
+        <source>Send coins to a ZDEEX address</source>
+        <translation>Испрати ZDEEX на ZDEEX адреса</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Потврди порака...</translation>
     </message>
     <message>
-        <source>Pirate</source>
-        <translation>Pirate</translation>
+        <source>ZDEEX</source>
+        <translation>ZDEEX</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -572,14 +572,14 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>pirate-core</name>
+    <name>zdeex-core</name>
     <message>
         <source>Options:</source>
         <translation>Опции:</translation>
     </message>
     <message>
-        <source>Pirate Core</source>
-        <translation>Pirate Core</translation>
+        <source>ZDEEX Core</source>
+        <translation>ZDEEX Core</translation>
     </message>
     <message>
         <source>Warning</source>

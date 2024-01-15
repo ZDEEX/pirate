@@ -1,12 +1,12 @@
 [Desktop Entry]
 Name=Treasure Chest
-Comment=Full node UI wallet for Pirate
+Comment=Full node UI wallet for ZDEEX
 GenericName=TreasureChest
-Exec=/usr/local/bin/pirate-qt %u
-Icon=pirate.xpm
+Exec=/usr/local/bin/zdeex-qt %u
+Icon=zdeex.xpm
 Type=Application
 StartupNotify=true
-StartupWMClass=pirate-qt
+StartupWMClass=zdeex-qt
 Categories=Utility;
-MimeType=x-scheme-handler/pirate;
+MimeType=x-scheme-handler/zdeex;
 Keywords=TreasureChest;

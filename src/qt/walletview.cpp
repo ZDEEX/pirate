@@ -9,7 +9,7 @@
 #include "addressbookpage.h"
 #include "zaddressbookpage.h"
 #include "askpassphrasedialog.h"
-#include "pirateoceangui.h"
+#include "zdeexoceangui.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "guiutil.h"
@@ -122,7 +122,7 @@ WalletView::~WalletView()
 {
 }
 
-void WalletView::setPirateOceanGUI(PirateOceanGUI *gui)
+void WalletView::setZDEEXOceanGUI(ZDEEXOceanGUI *gui)
 {
     if (gui)
     {

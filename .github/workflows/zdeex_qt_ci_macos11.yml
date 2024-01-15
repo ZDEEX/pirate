@@ -1,0 +1,47 @@
+# we are using separate workflow because CI producing test binaries with CPPFLAGS=-DTESTMODE
+
+name: ZDEEX qt build - MacOS 11 Catalina
+
+
+on:
+  push:
+    branches:
+    - master
+    - beta
+
+
+jobs:
+
+  osx-build:
+    name: OSX Build
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install deps (macOS)
+        run: |
+          brew update
+          brew upgrade
+          brew tap discoteq/discoteq; brew install flock
+          brew install autoconf autogen automake
+          brew install gcc@8
+          brew install binutils
+          brew install protobuf
+          brew install coreutils
+          brew install wget
+          brew install python3
+          brew install create-dmg
+      - name: Build (macOS)
+        run: |
+          ./zcutil/build-qt-mac.sh -j4
+          ls
+          zip --junk-paths zdeex-qt-osx zdeex-qt-mac.dmg
+      - name: Upload zdeex-qt-osx.zip as artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: zdeex-qt-osx
+          path: ./eskenas-qt-osx.zip
+      - name: Upload zdeex-qt-osx.dmg as artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: zdeex-qt-mac
+          path: ./zdeex-qt-mac.dmg

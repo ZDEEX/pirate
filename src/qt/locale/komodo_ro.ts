@@ -76,7 +76,7 @@
     </message>
 </context>
 <context>
-    <name>PirateOceanGUI</name>
+    <name>ZDEEXOceanGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Semnează &amp;mesajul...</translation>
@@ -142,8 +142,8 @@
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Pirate address</source>
-        <translation>Trimite monedele către o adresă Pirate</translation>
+        <source>Send coins to a ZDEEX address</source>
+        <translation>Trimite monedele către o adresă ZDEEX</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>Pirate</source>
-        <translation>Pirate</translation>
+        <source>ZDEEX</source>
+        <translation>ZDEEX</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your Pirate addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Pirate pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your ZDEEX addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de ZDEEX pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Pirate addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Pirate specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified ZDEEX addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de ZDEEX specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -214,12 +214,12 @@
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Pirate: URIs)</source>
-        <translation>Cerere plată (generează coduri QR și Pirate: URIs)</translation>
+        <source>Request payments (generates QR codes and ZDEEX: URIs)</source>
+        <translation>Cerere plată (generează coduri QR și ZDEEX: URIs)</translation>
     </message>
     <message>
-        <source>Open a Pirate: URI or payment request</source>
-        <translation>Deschide un Pirate: URI sau cerere de plată</translation>
+        <source>Open a ZDEEX: URI or payment request</source>
+        <translation>Deschide un ZDEEX: URI sau cerere de plată</translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -746,10 +746,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>pirate-core</name>
+    <name>zdeex-core</name>
     <message>
-        <source>Pirate Core</source>
-        <translation>Pirate Core</translation>
+        <source>ZDEEX Core</source>
+        <translation>ZDEEX Core</translation>
     </message>
     <message>
         <source>Information</source>

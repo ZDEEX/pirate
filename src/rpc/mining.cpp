@@ -732,12 +732,12 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp, const CPubKey& myp
     }
     if (Params().MiningRequiresPeers() && fvNodesEmpty)
     {
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Pirate is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "ZDEEX is not connected!");
     }
 
     // currently we have checkpoints only in KMD chain, so we checking IsInitialBlockDownload only for KMD itself
     if (chainName.isSymbol("PIRATE") && IsInitialBlockDownload()) {
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Pirate is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "ZDEEX is downloading blocks...");
     }
 
     static unsigned int nTransactionsUpdatedLast;

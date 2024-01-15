@@ -41,7 +41,7 @@
 #include "komodo_bitcoind.h"
 #ifdef ENABLE_WALLET
 #include "wallet/wallet.h"
-#include "wallet/rpcpiratewallet.h"
+#include "wallet/rpczdeexwallet.h"
 #endif
 
 #include "komodo_defs.h"
@@ -1545,8 +1545,8 @@ UniValue z_createbuildinstructions(const UniValue& params, bool fHelp, const CPu
           "2. \"outputs\"               (array, required) A json array of json output objects\n"
           "     [\n"
           "       {\n"
-          "         \"address\":address     (string, required) Pirate zaddr\n"
-          "         \"amount\":amount       (numeric, required) The numeric amount in ARRR\n"
+          "         \"address\":address     (string, required) ZDEEX zaddr\n"
+          "         \"amount\":amount       (numeric, required) The numeric amount in ZDEEX\n"
           "         \"memo\": \"string\"    (string, optional) String memo in UTF8 or Hexidecimal format\n"
           "         ,...\n"
           "       }\n"

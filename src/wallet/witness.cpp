@@ -124,7 +124,7 @@ UniValue exportsaplingtree(const UniValue& params, bool fHelp,  const CPubKey& m
         throw JSONRPCError(RPC_INTERNAL_ERROR, e.what());
     }
     if (exportdir.empty()) {
-        throw JSONRPCError(RPC_WALLET_ERROR, "Cannot export wallet until the pirated -exportdir option has been set");
+        throw JSONRPCError(RPC_WALLET_ERROR, "Cannot export wallet until the zdeexd -exportdir option has been set");
     }
 
     auto folderName = "saplingtree";
@@ -442,10 +442,10 @@ UniValue getsaplingblocks(const UniValue& params, bool fHelp,  const CPubKey& my
 static const CRPCCommand commands[] =
 {   //  category              name                            actor (function)              okSafeMode
     //  --------------------- ------------------------        -----------------------       ----------
-    {   "pirate Experimental",     "exportsaplingtree",                   &exportsaplingtree,                     true },
-    {   "pirate Experimental",     "getsaplingwitness",         &getsaplingwitness,           true },
-    {   "pirate Experimental",     "getsaplingwitnessatheight", &getsaplingwitnessatheight,   true },
-    {   "pirate Experimental",     "getsaplingblocks",          &getsaplingblocks,            true },
+    {   "zdeex Experimental",     "exportsaplingtree",                   &exportsaplingtree,                     true },
+    {   "zdeex Experimental",     "getsaplingwitness",         &getsaplingwitness,           true },
+    {   "zdeex Experimental",     "getsaplingwitnessatheight", &getsaplingwitnessatheight,   true },
+    {   "zdeex Experimental",     "getsaplingblocks",          &getsaplingblocks,            true },
 
 };
 

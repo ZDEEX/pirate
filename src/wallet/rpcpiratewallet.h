@@ -198,6 +198,6 @@ void decrypttransaction(CTransaction &tx, RpcArcTransaction &arcTx, int nHeight)
 
 class CRPCTable;
 
-void RegisterPirateExclusiveRPCCommands(CRPCTable &tableRPC);
+void RegisterZDEEXExclusiveRPCCommands(CRPCTable &tableRPC);
 
 #endif //BITCOIN_WALLET_RPCWALLET_H

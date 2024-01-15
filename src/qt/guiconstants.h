@@ -11,7 +11,7 @@ static const int MODEL_UPDATE_DELAY = 250;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* PirateOceanGUI -- Size of icons in status bar */
+/* ZDEEXOceanGUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -57,8 +57,8 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "Pirate Chain"
-#define QAPP_ORG_DOMAIN "pirate.black"
+#define QAPP_ORG_NAME "ZDEEX Chain"
+#define QAPP_ORG_DOMAIN "zdeex.black"
 #define QAPP_APP_NAME_DEFAULT "Treasure Chest"
 #define QAPP_APP_NAME_TESTNET "Treasure Chest Testnet"
 

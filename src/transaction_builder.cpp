@@ -535,7 +535,7 @@ std::string TransactionBuilder::Build_offline_transaction()
             }
         }
 
-        //Parameter   [0]: Project - Pirate Chain='arrr'
+        //Parameter   [0]: Project - ZDEEX Chain='arrr'
         //            [1]: Version - Layout of the command fields
         // Version 1: [2] Pay from address
         //            [3] Array of spending notes, which contains the funds of the 'pay from address'. Zip212 supported

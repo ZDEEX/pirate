@@ -344,7 +344,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the Pirate client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the ZDEEX client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -391,7 +391,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the Pirate network through a SOCKS5 proxy.</string>
+          <string>Connect to the ZDEEX network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -617,7 +617,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocksI2P">
          <property name="toolTip">
-          <string>Connect to the Pirate network through a SOCKS5 proxy.</string>
+          <string>Connect to the ZDEEX network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through I2P using SAM Proxy</string>
@@ -760,7 +760,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocksTor">
          <property name="toolTip">
-          <string>Connect to the Pirate network through a separate proxy for Tor hidden services.</string>
+          <string>Connect to the ZDEEX network through a separate proxy for Tor hidden services.</string>
          </property>
          <property name="text">
           <string>Use separate proxy to reach peers via Tor hidden services:</string>

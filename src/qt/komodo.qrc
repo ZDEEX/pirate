@@ -1,10 +1,10 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/stylesheets">
-        <file alias="pirate">res/stylesheets/pirate.css</file>
+        <file alias="zdeex">res/stylesheets/zdeex.css</file>
         <file alias="armada">res/stylesheets/armada.css</file>
         <file alias="ghostship">res/stylesheets/ghostship.css</file>
         <file alias="night">res/stylesheets/night.css</file>
-        <file alias="piratemap">res/stylesheets/piratemap.css</file>
+        <file alias="zdeexmap">res/stylesheets/zdeexmap.css</file>
         <file alias="treasure">res/stylesheets/treasure.css</file>
         <file alias="treasuremap">res/stylesheets/treasuremap.css</file>
         <file alias="dark">res/stylesheets/dark.css</file>
@@ -12,8 +12,8 @@
     </qresource>
 
     <qresource prefix="/backgrounds">
-        <file alias="pirate">res/backgrounds/pirate.png</file>
-        <file alias="piratemap">res/backgrounds/piratemap.png</file>
+        <file alias="zdeex">res/backgrounds/zdeex.png</file>
+        <file alias="zdeexmap">res/backgrounds/zdeexmap.png</file>
         <file alias="armada">res/backgrounds/armada.png</file>
         <file alias="ghostship">res/backgrounds/ghostship.png</file>
         <file alias="night">res/backgrounds/night.png</file>
@@ -23,7 +23,7 @@
     </qresource>
 
     <qresource prefix="/icons">
-        <file alias="komodo">res/icons/pirate.png</file>
+        <file alias="komodo">res/icons/zdeex.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="send">res/icons/send.png</file>

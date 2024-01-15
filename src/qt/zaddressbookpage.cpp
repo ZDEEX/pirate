@@ -10,7 +10,7 @@
 #include "ui_zaddressbookpage.h"
 
 #include "zaddresstablemodel.h"
-#include "pirateoceangui.h"
+#include "zdeexoceangui.h"
 #include "csvmodelwriter.h"
 #include "editzaddressdialog.h"
 #include "guiutil.h"
@@ -48,7 +48,7 @@ ZAddressBookPage::ZAddressBookPage(const PlatformStyle *platformStyle, Mode _mod
     ui->tableView->setFocus();
 
     setWindowTitle(tr("Receiving z-addresses"));
-    ui->labelExplanation->setText(tr("These are your Pirate z-addresses for receiving payments. It is recommended to use a new receiving z-address for each transaction."));
+    ui->labelExplanation->setText(tr("These are your ZDEEX z-addresses for receiving payments. It is recommended to use a new receiving z-address for each transaction."));
     ui->labelExplanation->setVisible(false);
 
     //Hide close button

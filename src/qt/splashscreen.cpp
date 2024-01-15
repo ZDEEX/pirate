@@ -144,18 +144,18 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
     seed->setLayout(layout);
 
     //Add Icon to the top
-    pirateIcon = new QLabel;
+    zdeexIcon = new QLabel;
     QPixmap pic(":/icons/komodo");
     QSize pickSize(128,128);
     pic = pic.scaled(pickSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-    pirateIcon->setPixmap(pic);
+    zdeexIcon->setPixmap(pic);
 
     //Center Icon Vertically
     QWidget *vicon = new QWidget;
     QVBoxLayout *viconLayout = new QVBoxLayout();
     vicon->setLayout(viconLayout);
     viconLayout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding));
-    viconLayout->addWidget(pirateIcon);
+    viconLayout->addWidget(zdeexIcon);
     viconLayout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding));
 
 
@@ -170,7 +170,7 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
 
     //Add Icon to Internal Layout
     layout->addWidget(hicon);
-    pirateIcon->setVisible(false);
+    zdeexIcon->setVisible(false);
 
     //New Wallwt Style Sheet
     QString styleSheet = "QWidget {background-color: #303030; color: #ffffff;} QFrame#outerFrame {background-color: #282828; color: #ffffff;} QFrame#innerFrame {background-color: #303030; color: #ffffff;} QGroupBox {background-color: #282828; color: #ffffff;} QLineEdit {background-color: #303030; color: #ffffff;} QPlainTextEdit {background-color: #303030; color: #ffffff;}";
@@ -298,7 +298,7 @@ static void showCreateWallet(SplashScreen *splash)
 {
     splash->layout->setEnabled(true);
     splash->seed->setVisible(true);
-    splash->pirateIcon->setVisible(true);
+    splash->zdeexIcon->setVisible(true);
     splash->newWallet->setVisible(true);
     splash->btnTypeSelect->setVisible(true);
 }
@@ -321,7 +321,7 @@ static void NeedUnlockWallet(SplashScreen *splash)
 {
     splash->layout->setEnabled(true);
     splash->seed->setVisible(true);
-    splash->pirateIcon->setVisible(true);
+    splash->zdeexIcon->setVisible(true);
     splash->openWallet->ui->lblIncorrect->setVisible(false);
     splash->openWallet->setVisible(true);
 }

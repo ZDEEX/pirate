@@ -2104,7 +2104,7 @@ bool CheckTransactionWithoutProofVerification(uint32_t tiptime,const CTransactio
         }
     }
 
-    // Ensure input values do not exceed MAX_MONEY// ARRR notary exception
+    // Ensure input values do not exceed MAX_MONEY// ZDEEX notary exception
     // We have not resolved the txin values at this stage,
     // but we do know what the joinsplits claim to add
     // to the value pool.
@@ -4914,7 +4914,7 @@ static bool ActivateBestChainStep(bool fSkipdpow, CValidationState &state, CBloc
                 pindexIter = pindexIter->pprev;
             }
         }
-// ARRR notary exception
+// ZDEEX notary exception
         CValidationState tmpstate;
         InvalidateBlock(tmpstate,pindexMostWork); // trying to invalidate longest chain, which tried to reorg notarized chain (in case of fork point below last notarized block)
         return state.DoS(100, error("ActivateBestChainStep(): pindexOldTip->nHeight.%d > notarizedht %d && pindexFork->nHeight.%d is < notarizedht %d, so ignore it",(int32_t)pindexOldTip->nHeight,notarizedht,(int32_t)pindexFork->nHeight,notarizedht),

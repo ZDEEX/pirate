@@ -24,7 +24,7 @@ QT_END_NAMESPACE
 
 /** Class for the splashscreen with information of the running client.
  *
- * @note this is intentionally not a QSplashScreen. Pirate Core initialization
+ * @note this is intentionally not a QSplashScreen. ZDEEX Core initialization
  * can take a long time, and in that case a progress window that cannot be
  * moved around and minimized has turned out to be frustrating to the user.
  */
@@ -38,7 +38,7 @@ public:
 
     QWidget* seed;
     QVBoxLayout* layout;
-    QLabel* pirateIcon;
+    QLabel* zdeexIcon;
     NewWallet* newWallet;
     RestoreSeed* restoreSeed;
     NewSeed* newSeed;

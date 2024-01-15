@@ -124,7 +124,7 @@
     </message>
 </context>
 <context>
-    <name>PirateOceanGUI</name>
+    <name>ZDEEXOceanGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Usklađivanje sa mrežom...</translation>
@@ -158,16 +158,16 @@
         <translation>Otvori &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Pirate address</source>
-        <translation>Pošalji novčiće na Pirate adresu</translation>
+        <source>Send coins to a ZDEEX address</source>
+        <translation>Pošalji novčiće na ZDEEX adresu</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Proveri poruku...</translation>
     </message>
     <message>
-        <source>Pirate</source>
-        <translation>Pirate</translation>
+        <source>ZDEEX</source>
+        <translation>ZDEEX</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -404,10 +404,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>pirate-core</name>
+    <name>zdeex-core</name>
     <message>
-        <source>Pirate Core</source>
-        <translation>Pirate Core</translation>
+        <source>ZDEEX Core</source>
+        <translation>ZDEEX Core</translation>
     </message>
     <message>
         <source>Information</source>

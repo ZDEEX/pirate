@@ -100,7 +100,7 @@
           <item>
            <widget class="QTextEdit" name="teInput">
             <property name="placeholderText">
-             <string>An on-line wallet will created a sign request when a &quot;viewing only&quot; address was used to send ARRR to a recipient. Paste the 'z_sign_offline' text in this text box and click on 'Sign' to have the transaction authorised. You need the spend key (private key) of the viewing address (public key) in your address book in order to sign the transaction</string>
+             <string>An on-line wallet will created a sign request when a &quot;viewing only&quot; address was used to send ZDEEX to a recipient. Paste the 'z_sign_offline' text in this text box and click on 'Sign' to have the transaction authorised. You need the spend key (private key) of the viewing address (public key) in your address book in order to sign the transaction</string>
             </property>
            </widget>
           </item>
@@ -183,7 +183,7 @@
            <bool>true</bool>
           </property>
           <property name="placeholderText">
-           <string>The signed transaction text will appear here if the transaction input is correct and you have the spending key (private key) of the 'from address' of the transaction. The signed output needs be transported back to the on-line wallet and send to the PirateNetwork to complete the transaction.</string>
+           <string>The signed transaction text will appear here if the transaction input is correct and you have the spending key (private key) of the 'from address' of the transaction. The signed output needs be transported back to the on-line wallet and send to the ZDEEX-COIN to complete the transaction.</string>
           </property>
          </widget>
         </item>

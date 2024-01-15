@@ -184,11 +184,11 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        vSeeds.push_back(CDNSSeedData("Forge1", "pirate1.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Forge2", "pirate2.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Forge3", "pirate3.cryptoforge.cc")); // Forge
+        vSeeds.push_back(CDNSSeedData("Forge1", "zdeex1.cryptoforge.cc")); // Forge
+        vSeeds.push_back(CDNSSeedData("Forge2", "zdeex2.cryptoforge.cc")); // Forge
+        vSeeds.push_back(CDNSSeedData("Forge3", "zdeex3.cryptoforge.cc")); // Forge
         vSeeds.push_back(CDNSSeedData("ForgeExporer", "explorer.cryptoforge.cc")); // Forge
-        vSeeds.push_back(CDNSSeedData("Explorer","explorer.pirate.black")); // Explorer tls enabled chmex
+        vSeeds.push_back(CDNSSeedData("Explorer","explorer.zdeex.black")); // Explorer tls enabled chmex
         vSeeds.push_back(CDNSSeedData("Dexstats","seed.dexstats.info")); // Dexstats chmex
         vSeeds.push_back(CDNSSeedData("Komodostats","seed.komodostats.com")); // komodostats webworker01
         vSeeds.push_back(CDNSSeedData("Bootstrap","bootstrap.arrr.black")); // geo optimized routing enabled chmex

@@ -140,7 +140,7 @@ QT_MOC_CPP = \
   qt/moc_bantablemodel.cpp \
   qt/moc_komodoaddressvalidator.cpp \
   qt/moc_komodoamountfield.cpp \
-  qt/moc_pirateoceangui.cpp \
+  qt/moc_zdeexoceangui.cpp \
   qt/moc_komodounits.cpp \
   qt/moc_callback.cpp \
   qt/moc_clientmodel.cpp \
@@ -229,7 +229,7 @@ KOMODO_QT_H = \
   qt/bantablemodel.h \
   qt/komodoaddressvalidator.h \
   qt/komodoamountfield.h \
-  qt/pirateoceangui.h \
+  qt/zdeexoceangui.h \
   qt/komodounits.h \
   qt/callback.h \
   qt/clientmodel.h \
@@ -293,9 +293,9 @@ RES_ICONS = \
   qt/res/icons/address-book.png \
   qt/res/icons/about.png \
   qt/res/icons/about_qt.png \
-  qt/res/icons/pirate.ico \
+  qt/res/icons/zdeex.ico \
   qt/res/icons/komodo_testnet.ico \
-  qt/res/icons/pirate.png \
+  qt/res/icons/zdeex.png \
   qt/res/icons/chevron.png \
   qt/res/icons/clock1.png \
   qt/res/icons/clock2.png \
@@ -349,7 +349,7 @@ KOMODO_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
   qt/komodoaddressvalidator.cpp \
   qt/komodoamountfield.cpp \
-  qt/pirateoceangui.cpp \
+  qt/zdeexoceangui.cpp \
   qt/komodounits.cpp \
   qt/clientmodel.cpp \
   qt/csvmodelwriter.cpp \
@@ -441,8 +441,8 @@ KOMODO_QT_CPP += \
 
 
 RES_IMAGES = \
-  qt/res/backgrounds/pirate.png \
-  qt/res/backgrounds/piratemap.png \
+  qt/res/backgrounds/zdeex.png \
+  qt/res/backgrounds/zdeexmap.png \
   qt/res/backgrounds/armada.png \
   qt/res/backgrounds/night.png \
   qt/res/backgrounds/ghostship.png \

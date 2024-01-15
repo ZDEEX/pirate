@@ -725,7 +725,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareZTransaction(WalletModelZTransa
         }
         else
         {
-            //taddr not allowed on PirateNetwork
+            //taddr not allowed on ZDEEX-COIN
             return InvalidAddress;
         }
 
@@ -887,7 +887,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction &tran
             }
             else
             #endif
-                if (!rcp.message.isEmpty()) // Message from normal pirate:URI (pirate:123...?message=example)
+                if (!rcp.message.isEmpty()) // Message from normal zdeex:URI (zdeex:123...?message=example)
                     newTx->vOrderForm.push_back(make_pair("Message", rcp.message.toStdString()));
         }
 

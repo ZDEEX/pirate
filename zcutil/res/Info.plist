@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>pirate-qt-mac</string>
+	<string>zdeex-qt-mac</string>
 	<key>CFBundleIconFile</key>
 	<string>logo.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.pirate.treasurechest</string>
+	<string>org.zdeex.treasurechest</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>5.7.5</string>
+	<string>1.0.1</string>
 	<key>CFBundleVersion</key>
-	<string>5.7.5</string>
+	<string>1.0.1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2022 PirateNetwork. All rights reserved.</string>
+	<string>Copyright © 2024 ZDEEX-COIN. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSSupportsAutomaticGraphicsSwitching</key>

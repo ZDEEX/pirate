@@ -9,7 +9,7 @@
 #include "timedata.h"
 #include "main.h"
 #include "wallet/wallet.h"
-#include "wallet/rpcpiratewallet.h"
+#include "wallet/rpczdeexwallet.h"
 #include "key_io.h"
 
 #include <stdint.h>

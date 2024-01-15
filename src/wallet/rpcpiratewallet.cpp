@@ -7,7 +7,7 @@
 #include "key_io.h"
 #include "rpc/server.h"
 #include "wallet.h"
-#include "rpcpiratewallet.h"
+#include "rpczdeexwallet.h"
 #include "utilmoneystr.h"
 
 #include "komodo_defs.h"
@@ -962,7 +962,7 @@ UniValue zs_listtransactions(const UniValue& params, bool fHelp, const CPubKey& 
   if (fHelp || params.size() > 5 || params.size() == 2)
       throw runtime_error(
         "zs_listtransactions\n"
-        "\nReturns an array of decrypted Pirate transactions.\n"
+        "\nReturns an array of decrypted ZDEEX transactions.\n"
         "\n"
         "This function only returns information on addresses with full spending keys."
         "\n"
@@ -1011,8 +1011,8 @@ UniValue zs_listtransactions(const UniValue& params, bool fHelp, const CPubKey& 
         "      \"txidPrev\":  \"transactionid\",    (string)  The transaction id of the output being spent\n"
         "      \"outputPrev\": n,                 (numeric) vout, shieledoutput or jsindex of output being spent \n"
         "      \"spendJsOutIndex\": n,            (numeric) Joinsplit Output index of the output being spent (sprout address type only)\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"spendable\": true/false          (bool)  Is this output spendable by this wallet\n"
@@ -1022,8 +1022,8 @@ UniValue zs_listtransactions(const UniValue& params, bool fHelp, const CPubKey& 
         "      \"output\": n,                     (numeric) vout, shieledoutput or jsindex\n"
         "      \"outIndex\": n,                   (numeric) Joinsplit Output index (sprout address type only)\n"
         "      \"outgoing\": true or false,       (bool)    funds leaving the wallet\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"change\": true/false             (string)  The note is change. This can result from sending funds\n"
@@ -1035,8 +1035,8 @@ UniValue zs_listtransactions(const UniValue& params, bool fHelp, const CPubKey& 
         "      \"output\": n,                     (numeric) vout, shieledoutput or jsindex\n"
         "      \"outIndex\": n,                   (numeric) Joinsplit Output index (sprout address type only)\n"
         "      \"outgoing\": true or false,       (bool)    funds leaving the wallet\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"change\": true/false             (string)  The note is change. This can result from sending funds\n"
@@ -1232,7 +1232,7 @@ UniValue zs_gettransaction(const UniValue& params, bool fHelp, const CPubKey& my
   if (fHelp || params.size() != 1)
       throw runtime_error(
         "zs_gettransaction\n"
-        "\nReturns a decrypted Pirate transaction.\n"
+        "\nReturns a decrypted ZDEEX transaction.\n"
         "\n"
         "\nArguments:\n"
         "1. \"txid:\"   (string, required) \n"
@@ -1256,8 +1256,8 @@ UniValue zs_gettransaction(const UniValue& params, bool fHelp, const CPubKey& my
         "      \"txidPrev\":  \"transactionid\",    (string)  The transaction id of the output being spent\n"
         "      \"outputPrev\": n,                 (numeric) vout, shieledoutput or jsindex of output being spent \n"
         "      \"spendJsOutIndex\": n,            (numeric) Joinsplit Output index of the output being spent (sprout address type only)\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"spendable\": true/false          (bool)  Is this output spendable by this wallet\n"
@@ -1267,8 +1267,8 @@ UniValue zs_gettransaction(const UniValue& params, bool fHelp, const CPubKey& my
         "      \"output\": n,                     (numeric) vout, shieledoutput or jsindex\n"
         "      \"outIndex\": n,                   (numeric) Joinsplit Output index (sprout address type only)\n"
         "      \"outgoing\": true or false,       (bool)    funds leaving the wallet\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"change\": true/false             (string)  The note is change. This can result from sending funds\n"
@@ -1280,8 +1280,8 @@ UniValue zs_gettransaction(const UniValue& params, bool fHelp, const CPubKey& my
         "      \"output\": n,                     (numeric) vout, shieledoutput or jsindex\n"
         "      \"outIndex\": n,                   (numeric) Joinsplit Output index (sprout address type only)\n"
         "      \"outgoing\": true or false,       (bool)    funds leaving the wallet\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"change\": true/false             (string)  The note is change. This can result from sending funds\n"
@@ -1339,7 +1339,7 @@ UniValue zs_listspentbyaddress(const UniValue& params, bool fHelp, const CPubKey
   if (fHelp || params.size() > 5 || params.size() == 3 || params.size() < 1)
       throw runtime_error(
         "zs_listspentbyaddress\n"
-        "\nReturns decrypted Pirate spent inputs for a single address.\n"
+        "\nReturns decrypted ZDEEX spent inputs for a single address.\n"
         "\n"
         "This function only returns information on addresses with full spending keys."
         "\n"
@@ -1364,7 +1364,7 @@ UniValue zs_listspentbyaddress(const UniValue& params, bool fHelp, const CPubKey
         "                               Last n number of transactions returned\n"
         "\n"
         "Default Parameters:\n"
-        "1. Pirate Address\n"
+        "1. ZDEEX Address\n"
         "2. 0 - O confimations required\n"
         "3. 0 - Returns all transactions\n"
         "4. 0 - Ignored\n"
@@ -1389,8 +1389,8 @@ UniValue zs_listspentbyaddress(const UniValue& params, bool fHelp, const CPubKey
         "      \"txidPrev\":  \"transactionid\",    (string)  The transaction id of the output being spent\n"
         "      \"outputPrev\": n,                 (numeric) vout, shieledoutput or jsindex of output being spent \n"
         "      \"spendJsOutIndex\": n,            (numeric) Joinsplit Output index of the output being spent (sprout address type only)\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"spendable\": true/false          (bool)  Is this output spendable by this wallet\n"
@@ -1624,7 +1624,7 @@ UniValue zs_listreceivedbyaddress(const UniValue& params, bool fHelp, const CPub
   if (fHelp || params.size() > 5 || params.size() == 3 || params.size() < 1)
       throw runtime_error(
         "zs_listreceivedbyaddress\n"
-        "\nReturns decrypted Pirate received outputs for a single address.\n"
+        "\nReturns decrypted ZDEEX received outputs for a single address.\n"
         "\n"
         "This function only returns information on addresses with full spending keys."
         "\n"
@@ -1672,8 +1672,8 @@ UniValue zs_listreceivedbyaddress(const UniValue& params, bool fHelp, const CPub
         "      \"output\": n,                     (numeric) vout, shieledoutput or jsindex\n"
         "      \"outIndex\": n,                   (numeric) Joinsplit Output index (sprout address type only)\n"
         "      \"outgoing\": true or false,       (bool)    funds leaving the wallet\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"change\": true/false             (bool)  The note is change. This can result from sending funds\n"
@@ -1909,7 +1909,7 @@ UniValue zs_listsentbyaddress(const UniValue& params, bool fHelp, const CPubKey&
   if (fHelp || params.size() > 5 || params.size() == 3 || params.size() < 1)
       throw runtime_error(
         "zs_listsentbyaddress\n"
-        "\nReturns decrypted Pirate outputs sent to a single address.\n"
+        "\nReturns decrypted ZDEEX outputs sent to a single address.\n"
         "\n"
         "This function only returns information on addresses sent from wallet addresses with full spending keys."
         "\n"
@@ -1957,8 +1957,8 @@ UniValue zs_listsentbyaddress(const UniValue& params, bool fHelp, const CPubKey&
         "      \"output\": n,                     (numeric) vout, shieledoutput or jsindex\n"
         "      \"outIndex\": n,                   (numeric) Joinsplit Output index (sprout address type only)\n"
         "      \"outgoing\": true or false,       (bool)    funds leaving the wallet\n"
-        "      \"address\": \"address\",            (string)  Pirate address\n"
-        "      \"scriptPubKey\": \"script\",        (string)  Script for the Pirate transparent address (transparent address type only)\n"
+        "      \"address\": \"address\",            (string)  ZDEEX address\n"
+        "      \"scriptPubKey\": \"script\",        (string)  Script for the ZDEEX transparent address (transparent address type only)\n"
         "      \"value\": x.xxxx,                 (numeric) Value of output being spent " + CURRENCY_UNIT + "\n"
         "      \"valueZat\": xxxxx,               (numeric) Value of output being spent in Zatoshis " + CURRENCY_UNIT + "\n"
         "      \"change\": true/false             (string)  The note is change. This can result from sending funds\n"
@@ -2711,15 +2711,15 @@ void decrypttransaction(CTransaction &tx, RpcArcTransaction &arcTx, int nHeight)
 static const CRPCCommand commands[] =
 {   //  category              name                          actor (function)              okSafeMode
     //  --------------------- ------------------------      -----------------------       ----------
-    {   "pirate Exclusive",     "zs_listtransactions",       &zs_listtransactions,          true },
-    {   "pirate Exclusive",     "zs_gettransaction",         &zs_gettransaction,            true },
-    {   "pirate Exclusive",     "zs_listspentbyaddress",     &zs_listspentbyaddress,        true },
-    {   "pirate Exclusive",     "zs_listreceivedbyaddress",  &zs_listreceivedbyaddress,     true },
-    {   "pirate Exclusive",     "zs_listsentbyaddress",      &zs_listsentbyaddress,         true },
-    {   "pirate Exclusive",     "getalldata",                &getalldata,                   true },
+    {   "zdeex Exclusive",     "zs_listtransactions",       &zs_listtransactions,          true },
+    {   "zdeex Exclusive",     "zs_gettransaction",         &zs_gettransaction,            true },
+    {   "zdeex Exclusive",     "zs_listspentbyaddress",     &zs_listspentbyaddress,        true },
+    {   "zdeex Exclusive",     "zs_listreceivedbyaddress",  &zs_listreceivedbyaddress,     true },
+    {   "zdeex Exclusive",     "zs_listsentbyaddress",      &zs_listsentbyaddress,         true },
+    {   "zdeex Exclusive",     "getalldata",                &getalldata,                   true },
 };
 
-void RegisterPirateExclusiveRPCCommands(CRPCTable &tableRPC)
+void RegisterZDEEXExclusiveRPCCommands(CRPCTable &tableRPC)
 {
     for (unsigned int vcidx = 0; vcidx < ARRAYLEN(commands); vcidx++)
         tableRPC.appendCommand(commands[vcidx].name, &commands[vcidx]);

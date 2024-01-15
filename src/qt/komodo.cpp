@@ -6,7 +6,7 @@
 #include "config/bitcoin-config.h"
 #endif
 
-#include "pirateoceangui.h"
+#include "zdeexoceangui.h"
 #include "komodo.h"
 #include "komodo_bitcoind.h"
 #include "komodo_defs.h"
@@ -110,7 +110,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("pirate-core", psz).toStdString();
+    return QCoreApplication::translate("zdeex-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -188,7 +188,7 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-/** Class encapsulating Pirate Core startup and shutdown.
+/** Class encapsulating ZDEEX Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
 class KomodoCore: public QObject
@@ -247,7 +247,7 @@ public:
     /// Get process return value
     int getReturnValue() const { return returnValue; }
 
-    /// Get window identifier of QMainWindow (PirateOceanGUI)
+    /// Get window identifier of QMainWindow (ZDEEXOceanGUI)
     WId getMainWinId() const;
 
 public Q_SLOTS:
@@ -266,7 +266,7 @@ private:
     QThread *coreThread;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    PirateOceanGUI *window;
+    ZDEEXOceanGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer=NULL;
@@ -417,7 +417,7 @@ KomodoApplication::KomodoApplication(int &argc, char **argv):
     // This must be done inside the KomodoApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     std::string platformName;
-    platformName = GetArg("-uiplatform", PirateOceanGUI::DEFAULT_UIPLATFORM);
+    platformName = GetArg("-uiplatform", ZDEEXOceanGUI::DEFAULT_UIPLATFORM);
     platformStyle = PlatformStyle::instantiate(QString::fromStdString(platformName));
     if (!platformStyle) // Fall back to "other" if specified name not found
         platformStyle = PlatformStyle::instantiate("other");
@@ -465,7 +465,7 @@ void KomodoApplication::createOptionsModel(bool resetSettings)
 
 void KomodoApplication::createWindow(const NetworkStyle *networkStyle)
 {
-    window = new PirateOceanGUI(platformStyle, networkStyle, 0);
+    window = new ZDEEXOceanGUI(platformStyle, networkStyle, 0);
 
     pollShutdownTimer = new QTimer(window);
     connect(pollShutdownTimer, SIGNAL(timeout()), window, SLOT(detectShutdown()));
@@ -568,8 +568,8 @@ void KomodoApplication::initializeResult(bool success)
         {
             walletModel = new WalletModel(platformStyle, vpwallets[0], optionsModel);
 
-            window->addWallet(PirateOceanGUI::DEFAULT_WALLET, walletModel);
-            window->setCurrentWallet(PirateOceanGUI::DEFAULT_WALLET);
+            window->addWallet(ZDEEXOceanGUI::DEFAULT_WALLET, walletModel);
+            window->setCurrentWallet(ZDEEXOceanGUI::DEFAULT_WALLET);
 
             // #ifdef ENABLE_BIP70
             // connect(walletModel, SIGNAL(coinsSent(CWallet*,SendCoinsRecipient,QByteArray)),
@@ -584,7 +584,7 @@ void KomodoApplication::initializeResult(bool success)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // pirate: URIs or payment requests:
+        // zdeex: URIs or payment requests:
         // connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          // window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         /*connect(paymentServer, SIGNAL(receivedZPaymentRequest(SendCoinsRecipient)),
@@ -607,7 +607,7 @@ void KomodoApplication::shutdownResult()
 
 void KomodoApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", PirateOceanGUI::tr("A fatal error occurred. Pirate can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", ZDEEXOceanGUI::tr("A fatal error occurred. ZDEEX can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
@@ -784,7 +784,7 @@ int main(int argc, char *argv[])
     int rv = EXIT_SUCCESS;
     try
     {
-        //The GUI config file gets read as part of the PirateOceanGUI
+        //The GUI config file gets read as part of the ZDEEXOceanGUI
         //initialisation in createActions(). This is required to know
         //if the wallet runs in online mode (default) or cold storage
         //offline mode. While in offline mode all classes performing
@@ -802,7 +802,7 @@ int main(int argc, char *argv[])
                 exit(EXIT_SUCCESS);
 
             // Start up the payment server early, too, so impatient users that click on
-            // pirate: links repeatedly have their payment requests routed to this process:
+            // zdeex: links repeatedly have their payment requests routed to this process:
             app.createPaymentServer();
         #endif
 

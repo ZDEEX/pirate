@@ -1,8 +1,8 @@
-TESTS += pirate-test
-bin_PROGRAMS += pirate-test
+TESTS += zdeex-test
+bin_PROGRAMS += zdeex-test
 
 # tool for generating our public parameters
-pirate_test_SOURCES = \
+zdeex_test_SOURCES = \
 	test-komodo/main.cpp \
 	test-komodo/testutils.cpp \
 	test-komodo/test_cryptoconditions.cpp \
@@ -33,11 +33,11 @@ pirate_test_SOURCES = \
   test-komodo/test_kmd_feat.cpp
 
 if TARGET_WINDOWS
-pirate_test_SOURCES += test-komodo/komodo-test-res.rc
+zdeex_test_SOURCES += test-komodo/komodo-test-res.rc
 endif
 
-pirate_test_CPPFLAGS = $(pirated_CPPFLAGS)
+zdeex_test_CPPFLAGS = $(zdeexd_CPPFLAGS)
 
-pirate_test_LDADD = -lgtest $(pirated_LDADD)
+zdeex_test_LDADD = -lgtest $(zdeexd_LDADD)
 
-pirate_test_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+zdeex_test_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static

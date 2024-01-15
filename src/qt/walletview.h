@@ -9,7 +9,7 @@
 
 #include <QStackedWidget>
 
-class PirateOceanGUI;
+class ZDEEXOceanGUI;
 class ClientModel;
 class OverviewPage;
 class PlatformStyle;
@@ -44,7 +44,7 @@ public:
     explicit WalletView(const PlatformStyle *platformStyle, QWidget *parent);
     ~WalletView();
 
-    void setPirateOceanGUI(PirateOceanGUI *gui);
+    void setZDEEXOceanGUI(ZDEEXOceanGUI *gui);
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
     */

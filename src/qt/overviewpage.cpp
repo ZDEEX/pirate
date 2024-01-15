@@ -45,7 +45,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     explicit TxViewDelegate(const PlatformStyle *_platformStyle, QObject *parent=nullptr):
-        QAbstractItemDelegate(parent), unit(KomodoUnits::ARRR),
+        QAbstractItemDelegate(parent), unit(KomodoUnits::ZDEEX),
         platformStyle(_platformStyle)
     {
 
@@ -96,9 +96,9 @@ public:
             QSettings settings;
             if (settings.value("strTheme", "armada").toString() == "dark") {
                 foreground = COLOR_NEGATIVE_DARK;
-            } else if (settings.value("strTheme", "armada").toString() == "pirate") {
+            } else if (settings.value("strTheme", "armada").toString() == "zdeex") {
                 foreground = COLOR_NEGATIVE;
-            } else if (settings.value("strTheme", "armada").toString() == "piratemap") {
+            } else if (settings.value("strTheme", "armada").toString() == "zdeexmap") {
                 foreground = COLOR_NEGATIVE_DARK;
             } else if (settings.value("strTheme", "armada").toString() == "armada") {
                 foreground = COLOR_NEGATIVE_DARK;
@@ -119,9 +119,9 @@ public:
             QSettings settings;
             if (settings.value("strTheme", "armada").toString() == "dark") {
                 foreground = COLOR_POSITIVE_DARK;
-            } else if (settings.value("strTheme", "armada").toString() == "pirate") {
+            } else if (settings.value("strTheme", "armada").toString() == "zdeex") {
                 foreground = COLOR_POSITIVE_PIRATE;
-            } else if (settings.value("strTheme", "armada").toString() == "piratemap") {
+            } else if (settings.value("strTheme", "armada").toString() == "zdeexmap") {
                 foreground = COLOR_POSITIVE_PIRATE;
             } else if (settings.value("strTheme", "armada").toString() == "armada") {
                 foreground = COLOR_POSITIVE_PIRATE;
@@ -265,7 +265,7 @@ OverviewPage::~OverviewPage()
 
 void OverviewPage::getGitRelease()
 {
-    getHttpsJson("https://api.github.com/repos/PirateNetwork/Pirate/releases", gitReply, GITHUB_HEADERS);
+    getHttpsJson("https://api.github.com/repos/ZDEEX-COIN/ZDEEX/releases", gitReply, GITHUB_HEADERS);
 }
 
 void OverviewPage::replyGitRelease()
@@ -304,8 +304,8 @@ void OverviewPage::replyGitRelease()
                       UpdateDialog dlg(this, clientVersion, gitVersion);
                       dlg.exec();
                       if (dlg.result() == QDialog::Accepted) {
-                          //Open Pirate Github release page
-                          QDesktopServices::openUrl(QUrl("https://github.com/Piratenetwork/Pirate/releases"));
+                          //Open ZDEEX Github release page
+                          QDesktopServices::openUrl(QUrl("https://github.com/ZDEEXnetwork/ZDEEX/releases"));
                       }
                       // Set IgnoreVersion
                       qint64 newIgnoreTime = GetTime();
@@ -325,7 +325,7 @@ void OverviewPage::replyGitRelease()
 
 void OverviewPage::getPrice()
 {
-    getHttpsJson("https://api.coingecko.com/api/v3/simple/price?ids=pirate-chain&vs_currencies=btc%2Cusd%2Ceur&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true", cmcReply, CMC_HEADERS);
+    getHttpsJson("https://api.coingecko.com/api/v3/simple/price?ids=zdeex-chain&vs_currencies=btc%2Cusd%2Ceur&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true", cmcReply, CMC_HEADERS);
 }
 
 void OverviewPage::replyPriceFinished()
@@ -335,7 +335,7 @@ void OverviewPage::replyPriceFinished()
             QJsonDocument response = QJsonDocument::fromJson(cmcReply->response.c_str());
 
             const QJsonObject item  = response.object();
-            const QJsonObject usd  = item["pirate-chain"].toObject();
+            const QJsonObject usd  = item["zdeex-chain"].toObject();
             auto fiatValue = usd["usd"].toDouble();
 
             double currentFiat = currentPrivateBalance * fiatValue;

@@ -62,12 +62,12 @@
         <translation>Адреси за получаване</translation>
     </message>
     <message>
-        <source>These are your Pirate addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your ZDEEX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Това са адресите на получателите на плащания. Винаги проверявайте размера на сумата и адреса на получателя, преди да изпратите монети.</translation>
     </message>
     <message>
-        <source>These are your Pirate addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са Вашите Pirate адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
+        <source>These are your ZDEEX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Това са Вашите ZDEEX адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -228,7 +228,7 @@
     </message>
 </context>
 <context>
-    <name>PirateOceanGUI</name>
+    <name>ZDEEXOceanGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Подписване на &amp;съобщение...</translation>
@@ -330,8 +330,8 @@
         <translation>Повторно индексиране на блоковете на диска...</translation>
     </message>
     <message>
-        <source>Send coins to a Pirate address</source>
-        <translation>Изпращане към Pirate адрес</translation>
+        <source>Send coins to a ZDEEX address</source>
+        <translation>Изпращане към ZDEEX адрес</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -354,8 +354,8 @@
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>Pirate</source>
-        <translation>Pirate</translation>
+        <source>ZDEEX</source>
+        <translation>ZDEEX</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -382,12 +382,12 @@
         <translation>Шифроване на личните ключове,които принадлежат на портфейла Ви.</translation>
     </message>
     <message>
-        <source>Sign messages with your Pirate addresses to prove you own them</source>
-        <translation>Пишете съобщения със своя Pirate адрес за да докажете,че е ваш.</translation>
+        <source>Sign messages with your ZDEEX addresses to prove you own them</source>
+        <translation>Пишете съобщения със своя ZDEEX адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Pirate addresses</source>
-        <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените Pirate адреси.</translation>
+        <source>Verify messages to ensure they were signed with specified ZDEEX addresses</source>
+        <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените ZDEEX адреси.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -406,8 +406,8 @@
         <translation>Раздели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Pirate: URIs)</source>
-        <translation>Изискване на плащания(генерира QR кодове и Pirate: URIs)</translation>
+        <source>Request payments (generates QR codes and ZDEEX: URIs)</source>
+        <translation>Изискване на плащания(генерира QR кодове и ZDEEX: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -418,8 +418,8 @@
         <translation>Покажи списък с използваните адреси и имена.</translation>
     </message>
     <message>
-        <source>Open a Pirate: URI or payment request</source>
-        <translation>Отворете Pirate: URI  или заявка за плащане</translation>
+        <source>Open a ZDEEX: URI or payment request</source>
+        <translation>Отворете ZDEEX: URI  или заявка за плащане</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -462,8 +462,8 @@
         <translation>Синхронизиран</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Pirate command-line options</source>
-        <translation>Покажи %1 помощно съобщение за да получиш лист с възможни Pirate команди</translation>
+        <source>Show the %1 help message to get a list with possible ZDEEX command-line options</source>
+        <translation>Покажи %1 помощно съобщение за да получиш лист с възможни ZDEEX команди</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -706,8 +706,8 @@
         <translation>Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Pirate address.</source>
-        <translation>"%1" не е валиден Pirate адрес.</translation>
+        <source>The entered address "%1" is not a valid ZDEEX address.</source>
+        <translation>"%1" не е валиден ZDEEX адрес.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -928,16 +928,16 @@
         <translation>&amp;Похарчете непотвърденото ресто</translation>
     </message>
     <message>
-        <source>Automatically open the Pirate client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваряне на входящия Pirate порт. Работи само с рутери поддържащи UPnP.</translation>
+        <source>Automatically open the ZDEEX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваряне на входящия ZDEEX порт. Работи само с рутери поддържащи UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Отваряне на входящия порт чрез &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Pirate network through a SOCKS5 proxy.</source>
-        <translation>Свързване с Pirate мрежата чрез SOCKS5  прокси.</translation>
+        <source>Connect to the ZDEEX network through a SOCKS5 proxy.</source>
+        <translation>Свързване с ZDEEX мрежата чрез SOCKS5  прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1031,8 +1031,8 @@
         <translation>Формуляр</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Pirate network after a connection is established, but this process has not completed yet.</source>
-        <translation>Текущата информация на екрана може да не е актуална. Вашият портфейл ще се синхронизира автоматично с мрежата на Pirate, щом поне една връзката с нея се установи; този процес все още не е приключил.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ZDEEX network after a connection is established, but this process has not completed yet.</source>
+        <translation>Текущата информация на екрана може да не е актуална. Вашият портфейл ще се синхронизира автоматично с мрежата на ZDEEX, щом поне една връзката с нея се установи; този процес все още не е приключил.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1086,8 +1086,8 @@
         <translation>Възникна грешка по време назаявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start Pirate: click-to-pay handler</source>
-        <translation>Pirate не можe да се стартира: click-to-pay handler</translation>
+        <source>Cannot start ZDEEX: click-to-pay handler</source>
+        <translation>ZDEEX не можe да се стартира: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1160,8 +1160,8 @@
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a Pirate address (e.g. %1)</source>
-        <translation>Въведете Pirate адрес (например: %1)</translation>
+        <source>Enter a ZDEEX address (e.g. %1)</source>
+        <translation>Въведете ZDEEX адрес (например: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1713,8 +1713,8 @@
         <translation>Заявката за плащане е изтекла.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Pirate address</source>
-        <translation>Внимание: Невалиден Pirate адрес</translation>
+        <source>Warning: Invalid ZDEEX address</source>
+        <translation>Внимание: Невалиден ZDEEX адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1833,7 +1833,7 @@
         <translation>Копиране на текущия подпис</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Pirate address</source>
+        <source>Sign the message to prove you own this ZDEEX address</source>
         <translation>Подпишете съобщение като доказателство, че притежавате определен адрес</translation>
     </message>
     <message>
@@ -1849,8 +1849,8 @@
         <translation>&amp;Провери</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Pirate address</source>
-        <translation>Проверете съобщение, за да сте сигурни че е подписано с определен Pirate адрес</translation>
+        <source>Verify the message to ensure it was signed with the specified ZDEEX address</source>
+        <translation>Проверете съобщение, за да сте сигурни че е подписано с определен ZDEEX адрес</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2352,7 +2352,7 @@
     </message>
 </context>
 <context>
-    <name>pirate-core</name>
+    <name>zdeex-core</name>
     <message>
         <source>Options:</source>
         <translation>Опции:</translation>
@@ -2370,8 +2370,8 @@
         <translation>Въведете Ваш публичен адрес</translation>
     </message>
     <message>
-        <source>Pirate Core</source>
-        <translation>Pirate ядро</translation>
+        <source>ZDEEX Core</source>
+        <translation>ZDEEX ядро</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

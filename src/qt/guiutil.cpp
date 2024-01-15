@@ -133,7 +133,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent, bool allowZ
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Pirate address (e.g. %1)").arg(QString("zs1u39a4y9g8tn...hnc2csmcl")));
+    widget->setPlaceholderText(QObject::tr("Enter a ZDEEX address (e.g. %1)").arg(QString("zs1u39a4y9g8tn...hnc2csmcl")));
 #endif
     widget->setValidator(new KomodoAddressEntryValidator(parent, allowZAddresses));
     widget->setCheckValidator(new KomodoAddressCheckValidator(parent, allowZAddresses));
@@ -150,8 +150,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseKomodoURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no pirate: URI
-    if(!uri.isValid() || uri.scheme() != QString("pirate"))
+    // return if URI is not valid or is no zdeex: URI
+    if(!uri.isValid() || uri.scheme() != QString("zdeex"))
         return false;
 
     SendCoinsRecipient rv;
@@ -191,7 +191,7 @@ bool parseKomodoURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!KomodoUnits::parse(KomodoUnits::ARRR, i->second, &rv.amount))
+                if(!KomodoUnits::parse(KomodoUnits::ZDEEX, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -211,13 +211,13 @@ bool parseKomodoURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseKomodoURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert pirate:// to pirate:
+    // Convert zdeex:// to zdeex:
     //
-    //    Cannot handle this later, because pirate:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because zdeex:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("pirate://", Qt::CaseInsensitive))
+    if(uri.startsWith("zdeex://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 10, "pirate:");
+        uri.replace(0, 10, "zdeex:");
     }
     QUrl uriInstance(uri);
     return parseKomodoURI(uriInstance, out);
@@ -225,12 +225,12 @@ bool parseKomodoURI(QString uri, SendCoinsRecipient *out)
 
 QString formatKomodoURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("pirate:%1").arg(info.address);
+    QString ret = QString("zdeex:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(KomodoUnits::format(KomodoUnits::ARRR, info.amount, false, KomodoUnits::separatorNever));
+        ret += QString("?amount=%1").arg(KomodoUnits::format(KomodoUnits::ZDEEX, info.amount, false, KomodoUnits::separatorNever));
         paramCount++;
     }
 

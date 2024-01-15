@@ -1,42 +1,42 @@
-![Pirate cli build - Ubuntu 18.04](https://github.com/PirateNetwork/pirate/workflows/Pirate%20cli%20build%20-%20Ubuntu%2018.04/badge.svg)\
-![Pirate cli build - Ubuntu 20.04](https://github.com/PirateNetwork/pirate/workflows/Pirate%20cli%20build%20-%20Ubuntu%2020.04/badge.svg)\
-![Pirate cli build - Windows cross compile 18.04](https://github.com/PirateNetwork/pirate/workflows/Pirate%20cli%20build%20-%20Windows%20cross%20compile%2018.04/badge.svg)\
-![Pirate cli build - Windows cross compile 20.04](https://github.com/PirateNetwork/pirate/workflows/Pirate%20cli%20build%20-%20Windows%20cross%20compile%2020.04/badge.svg)\
-![Pirate cli build - MacOS 10.15 Catalina](https://github.com/PirateNetwork/pirate/workflows/Pirate%20cli%20build%20-%20MacOS/badge.svg)\
-![Pirate Logo](https://i.ibb.co/F7Dgnxy/Pirate-Logo-Wordmark-Gold.png "Pirate Chain Logo")
+![ZDEEX cli build - Ubuntu 18.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20Ubuntu%2018.04/badge.svg)\
+![ZDEEX cli build - Ubuntu 20.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20Ubuntu%2020.04/badge.svg)\
+![ZDEEX cli build - Windows cross compile 18.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20Windows%20cross%20compile%2018.04/badge.svg)\
+![ZDEEX cli build - Windows cross compile 20.04](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20Windows%20cross%20compile%2020.04/badge.svg)\
+![ZDEEX cli build - MacOS 10.15 Catalina](https://github.com/ZDEEX-COIN/zdeex/workflows/ZDEEX%20cli%20build%20-%20MacOS/badge.svg)\
+![ZDEEX Logo](https://i.ibb.co/F7Dgnxy/ZDEEX-Logo-Wordmark-Gold.png "ZDEEX Chain Logo")
 
 
-## Pirate Chain
+## ZDEEX Chain
 
-This is the official Pirate Chain sourcecode repository based on https://github.com/jl777/komodo.
+This is the official ZDEEX Chain sourcecode repository based on https://github.com/jl777/komodo.
 
 ## Development Resources
 
-- Pirate Chain Website: [https://pirate.black](https://pirate.black/)
+- ZDEEX Chain Website: [https://zdeex.black](https://zdeex.black/)
 - Komodo Platform: [https://komodoplatform.com](https://komodoplatform.com/)
-- Pirate Blockexplorer: [https://explorer.pirate.black](https://pirate.black/)
-- Pirate Discord: [https://pirate.black/discord](https://pirate.black/discord)
+- ZDEEX Blockexplorer: [https://explorer.zdeex.black](https://zdeex.black/)
+- ZDEEX Discord: [https://zdeex.black/discord](https://zdeex.black/discord)
 - BTT ANN: [https://bitcointalk.org/index.php?topic=4979549.0](https://bitcointalk.org/index.php?topic=4979549.0/)
-- Mail: [marketing@pirate.black](mailto:marketing@pirate.black)
-- Support: [https://pirate.black/discord](https://pirate.black/discord)
-- API references & Dev Documentation: [https://docs.pirate.black](https://docs.pirate.black/)
-- Blog: [https://pirate.black/blog](https://pirate.black/blog/)
-- Whitepaper: [Pirate Chain Whitepaper](https://pirate.black/whitepaper)
+- Mail: [marketing@zdeex.black](mailto:marketing@zdeex.black)
+- Support: [https://zdeex.black/discord](https://zdeex.black/discord)
+- API references & Dev Documentation: [https://docs.zdeex.black](https://docs.zdeex.black/)
+- Blog: [https://zdeex.black/blog](https://zdeex.black/blog/)
+- Whitepaper: [ZDEEX Chain Whitepaper](https://zdeex.black/whitepaper)
 
-## Komodo Platform Technologies Integrated In Pirate Chain
+## Komodo Platform Technologies Integrated In ZDEEX Chain
 
 - Delayed Proof of Work (dPoW) - Additional security layer and Komodos own consensus algorithm  
 - zk-SNARKs - Komodo Platform's privacy technology for shielded transactions  
 
 
 ## Tech Specification
-- Max Supply: 200 million ARRR
+- Max Supply: 200 million ZDEEX
 - Block Time: 60s
-- Block Reward: 256 ARRR
+- Block Reward: 256 ZDEEX
 - Mining Algorithm: Equihash 200,9
 
 ## About this Project
-Pirate Chain (ARRR) is a 100% private send cryptocurrency. It uses a privacy protocol that cannot be compromised by other users activity on the network. Most privacy coins are riddled with holes created by optional privacy. Pirate Chain uses zk-SNARKs to shield 100% of the peer to peer transactions on the blockchain making for highly anonymous and private transactions.
+ZDEEX Chain (ZDEEX) is a 100% private send cryptocurrency. It uses a privacy protocol that cannot be compromised by other users activity on the network. Most privacy coins are riddled with holes created by optional privacy. ZDEEX Chain uses zk-SNARKs to shield 100% of the peer to peer transactions on the blockchain making for highly anonymous and private transactions.
 
 ## Getting started
 Build the code as described below. To see instructions on how to construct and send an offline transaction look
@@ -67,17 +67,17 @@ sudo apt-get install liblz4-dev libbrotli-dev
 #The following packages are needed:
 pacman -Syu base-devel pkg-config glibc m4 gcc autoconf libtool ncurses unzip git python python-pyzmq zlib wget libcurl-gnutls automake curl cmake mingw-w64
 ```
-### Build Pirate
+### Build ZDEEX
 
 This software is based on zcash and considered experimental and is continuously undergoing heavy development.
 
-The dev branch is considered the bleeding edge codebase while the master-branch is considered tested (unit tests, runtime tests, functionality). At no point of time do the Pirate developers take any responsibility for any damage out of the usage of this software.
-Pirate builds for all operating systems out of the same codebase. Follow the OS specific instructions from below.
+The dev branch is considered the bleeding edge codebase while the master-branch is considered tested (unit tests, runtime tests, functionality). At no point of time do the ZDEEX developers take any responsibility for any damage out of the usage of this software.
+ZDEEX builds for all operating systems out of the same codebase. Follow the OS specific instructions from below.
 
 #### Linux
 ```shell
-git clone https://github.com/PirateNetwork/pirate --branch master
-cd pirate
+git clone https://github.com/ZDEEX-COIN/zdeex --branch master
+cd zdeex
 # This step is not required for when using the Qt GUI
 ./zcutil/fetch-params.sh
 
@@ -108,8 +108,8 @@ brew update
 brew upgrade
 brew tap discoteq/discoteq; brew install flock
 brew install autoconf autogen automake gcc@8 binutilsprotobuf coreutils wget python3
-git clone https://github.com/PirateNetwork/pirate --branch master
-cd pirate
+git clone https://github.com/ZDEEX-COIN/zdeex --branch master
+cd zdeex
 # This step is not required for when using the Qt GUI
 ./zcutil/fetch-params.sh
 
@@ -135,8 +135,8 @@ sudo update-alternatives --config x86_64-w64-mingw32-gcc
 sudo update-alternatives --config x86_64-w64-mingw32-g++
 # (configure to use POSIX variant)
 
-git clone https://github.com/PirateNetwork/pirate --branch master
-cd pirate
+git clone https://github.com/ZDEEX-COIN/zdeex --branch master
+cd zdeex
 # This step is not required for when using the Qt GUI
 ./zcutil/fetch-params.sh
 
@@ -148,30 +148,30 @@ cd pirate
 #For qt GUI binaries
 ./zcutil/build-qt-win.sh -j8
 ```
-**Pirate is experimental and a work-in-progress.** Use at your own risk.
+**ZDEEX is experimental and a work-in-progress.** Use at your own risk.
 
-To run the Pirate GUI wallet:
+To run the ZDEEX GUI wallet:
 
 **Linux**
-`pirate-qt-linux`
+`zdeex-qt-linux`
 
 **OSX**
-`pirate-qt-mac`
+`zdeex-qt-mac`
 
 **Windows**
-`pirate-qt-win.exe`
+`zdeex-qt-win.exe`
 
 
-To run the daemon for Pirate Chain:  
-`pirated`
-both pirated and pirate-cli are located in the src directory after successfully building  
+To run the daemon for ZDEEX Chain:  
+`zdeexd`
+both zdeexd and zdeex-cli are located in the src directory after successfully building  
 
-To reset the Pirate Chain blockchain change into the *~/.komodo/PIRATE* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log` and restart daemon
+To reset the ZDEEX Chain blockchain change into the *~/.komodo/PIRATE* data directory and delete the corresponding files by running `rm -rf blocks chainstate debug.log komodostate db.log` and restart daemon
 
 To initiate a bootstrap download on the GUI wallet add bootstrap=1 to the PIRATE.conf file.
 
 
-**Pirate is based on Komodo which is unfinished and highly experimental.** Use at your own risk.
+**ZDEEX is based on Komodo which is unfinished and highly experimental.** Use at your own risk.
 
 License
 -------

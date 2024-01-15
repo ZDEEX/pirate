@@ -27,7 +27,7 @@ const struct NUInfo NetworkUpgradeInfo[Consensus::MAX_NETWORK_UPGRADES] = {
     {
         /*.nBranchId =*/ 0,
         /*.strName =*/ "Sprout",
-        /*.strInfo =*/ "The Pirate network at launch",
+        /*.strInfo =*/ "The ZDEEX network at launch",
     },
     {
         /*.nBranchId =*/ 0x74736554,

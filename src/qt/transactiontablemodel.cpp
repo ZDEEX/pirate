@@ -19,7 +19,7 @@
 #include "util.h"
 #include "main.h"
 #include "wallet/wallet.h"
-#include "wallet/rpcpiratewallet.h"
+#include "wallet/rpczdeexwallet.h"
 
 #include <QColor>
 #include <QDateTime>
@@ -741,9 +741,9 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
             QSettings settings;
             if (settings.value("strTheme", "armada").toString() == "dark") {
                 return COLOR_NEGATIVE_DARK;
-            } else if (settings.value("strTheme", "armada").toString() == "pirate") {
+            } else if (settings.value("strTheme", "armada").toString() == "zdeex") {
                 return COLOR_NEGATIVE;
-            } else if (settings.value("strTheme", "armada").toString() == "piratemap") {
+            } else if (settings.value("strTheme", "armada").toString() == "zdeexmap") {
                 return COLOR_NEGATIVE_DARK;
             } else if (settings.value("strTheme", "armada").toString() == "armada") {
                 return COLOR_NEGATIVE_DARK;
@@ -764,9 +764,9 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
             QSettings settings;
             if (settings.value("strTheme", "armada").toString() == "dark") {
                 return COLOR_POSITIVE_DARK;
-            } else if (settings.value("strTheme", "armada").toString() == "pirate") {
+            } else if (settings.value("strTheme", "armada").toString() == "zdeex") {
                 return COLOR_POSITIVE_PIRATE;
-            } else if (settings.value("strTheme", "armada").toString() == "piratemap") {
+            } else if (settings.value("strTheme", "armada").toString() == "zdeexmap") {
                 return COLOR_POSITIVE_PIRATE;
             } else if (settings.value("strTheme", "armada").toString() == "armada") {
                 return COLOR_POSITIVE_PIRATE;

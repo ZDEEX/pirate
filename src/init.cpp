@@ -1179,7 +1179,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     fLogIPs = GetBoolArg("-logips", false);
 
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("Pirate version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
+    LogPrintf("ZDEEX version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
 
     //Get Thread Metrics
     // unsigned int minThreads = 1;
@@ -1903,7 +1903,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
             nMaxConnections=0;
             useBootstrap = false;
 
-            //Note: By this time the GUI configuration files: 'Pirate Chain/Treasure\ Chest.conf' and
+            //Note: By this time the GUI configuration files: 'ZDEEX Chain/Treasure\ Chest.conf' and
             //      PIRATE.conf is already created. We'll have to update the GUI configuration from
             //      the UI code
         }
@@ -2207,10 +2207,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                 InitWarning(msg);
             }
             else if (nLoadWalletRet == DB_TOO_NEW)
-                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Pirate") << "\n";
+                strErrors << _("Error loading wallet.dat: Wallet requires newer version of ZDEEX") << "\n";
             else if (nLoadWalletRet == DB_NEED_REWRITE)
             {
-                strErrors << _("Wallet needed to be rewritten: restart Pirate to complete") << "\n";
+                strErrors << _("Wallet needed to be rewritten: restart ZDEEX to complete") << "\n";
                 LogPrintf("%s", strErrors.str());
                 return InitError(strErrors.str());
             }
@@ -2294,11 +2294,11 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                       InitWarning(msg);
                   }
                   else if (nLoadWalletRet == DB_TOO_NEW)
-                      strErrors << _("Error loading wallet.dat: Wallet requires newer version of Pirate") << "\n";
+                      strErrors << _("Error loading wallet.dat: Wallet requires newer version of ZDEEX") << "\n";
 
                   else if (nLoadWalletRet == DB_NEED_REWRITE)
                   {
-                      strErrors << _("Wallet needed to be rewritten: restart Pirate to complete") << "\n";
+                      strErrors << _("Wallet needed to be rewritten: restart ZDEEX to complete") << "\n";
                       LogPrintf("%s", strErrors.str());
                       return InitError(strErrors.str());
                   }

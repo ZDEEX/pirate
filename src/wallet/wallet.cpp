@@ -43,7 +43,7 @@
 #include "wallet/asyncrpcoperation_sweeptoaddress.h"
 #include "zcash/address/zip32.h"
 #include "cc/CCinclude.h"
-#include "rpcpiratewallet.h"
+#include "rpczdeexwallet.h"
 #include "komodo_utils.h"
 #include "komodo_bitcoind.h"
 #include "komodo_notary.h"

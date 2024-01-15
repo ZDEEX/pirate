@@ -55,7 +55,7 @@
 extern int nMaxConnections;          // from net.cpp
 
 const int KOMODO_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString KOMODO_IPC_PREFIX("pirate:");
+const QString KOMODO_IPC_PREFIX("zdeex:");
 
 // #ifdef ENABLE_BIP70
 // // BIP70 payment protocol messages
@@ -226,11 +226,11 @@ void PaymentServer::ipcParseCommandLine(int argc, char* argv[])
         if (arg.startsWith("-"))
             continue;
 
-        // If the pirate: URI contains a payment request, we are not able to detect the
+        // If the zdeex: URI contains a payment request, we are not able to detect the
         // network as that would require fetching and parsing the payment request.
         // That means clicking such an URI which contains a testnet payment request
         // will start a mainnet instance and throw a "wrong network" error.
-        if (arg.startsWith(KOMODO_IPC_PREFIX, Qt::CaseInsensitive)) // pirate: URI
+        if (arg.startsWith(KOMODO_IPC_PREFIX, Qt::CaseInsensitive)) // zdeex: URI
         {
             savedPaymentRequests.append(arg);
 
@@ -346,7 +346,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
     }
 
     // Install global event filter to catch QFileOpenEvents
-    // on Mac: sent when you click pirate: links
+    // on Mac: sent when you click zdeex: links
     // other OSes: helpful when dealing with payment request files
     if (parent)
         parent->installEventFilter(this);
@@ -363,7 +363,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(0, tr("Payment request error"),
-                tr("Cannot start pirate: click-to-pay handler"));
+                tr("Cannot start zdeex: click-to-pay handler"));
         }
         else {
             connect(uriServer, SIGNAL(newConnection()), this, SLOT(handleURIConnection()));
@@ -382,7 +382,7 @@ PaymentServer::~PaymentServer()
 }
 
 //
-// OSX-specific way of handling pirate: URIs and PaymentRequest mime types.
+// OSX-specific way of handling zdeex: URIs and PaymentRequest mime types.
 // Also used by paymentservertests.cpp and when opening a payment request file
 // via "Open URI..." menu entry.
 //
@@ -412,7 +412,7 @@ bool PaymentServer::eventFilter(QObject *object, QEvent *event)
 //     if (netManager != nullptr)
 //         delete netManager;
 //
-//     // netManager is used to fetch paymentrequests given in pirate: URIs
+//     // netManager is used to fetch paymentrequests given in zdeex: URIs
 //     netManager = new QNetworkAccessManager(this);
 //
 //     QNetworkProxy proxy;
@@ -468,7 +468,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith(KOMODO_IPC_PREFIX, Qt::CaseInsensitive)) // pirate: URI
+    if (s.startsWith(KOMODO_IPC_PREFIX, Qt::CaseInsensitive)) // zdeex: URI
     {
 #if QT_VERSION < 0x050000
         QUrl uri(s);
@@ -517,7 +517,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
             }
             else
                 Q_EMIT message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid Pirate address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid ZDEEX address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;

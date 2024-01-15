@@ -2,7 +2,7 @@
 This README matches the behaviour of Treasure Chest v5.6
 
 ## Introduction
-The problem with traditional wallets and how Pirate.black addresses these
+The problem with traditional wallets and how ZDEEX.black addresses these
 shortfalls:
 1. How traditional wallets work
    A file called 'wallet.dat' stores your addresses. Each address consists of a public
@@ -85,15 +85,15 @@ shortfalls:
    *  How do you view the transactions & balance of an offline address?
    *  How do you spend the funds in an offline address?
    
-   Pirate's Treasure Chest wallet overcomes these obstacles as follow:
+   ZDEEX's Treasure Chest wallet overcomes these obstacles as follow:
 
    Viewing the transaction history
    -------------------------------
-   The Pirate blockchain is encrypted. None of the transaction data is visible on
+   The ZDEEX blockchain is encrypted. None of the transaction data is visible on
    the blockchain. You can't import the public address into the online wallet and
    view the activity that occurred on that address.
 
-   To overcome the limitation imposed by the encrypted blockchain, Pirate splits 
+   To overcome the limitation imposed by the encrypted blockchain, ZDEEX splits 
    the public part of the address in two:
    Spending address: (Starts with 'zs1') This is what you share with somebody to pay you.
                    The sender can not obtain further information regarding the balance
@@ -126,13 +126,13 @@ shortfalls:
 6. Communicatin
    The Treasure Chest wallet supports encryption between the wallet application and the 
    network miner nodes. Your ISP and other information gatherers on the internet won't
-   be able to figure out that you're transacting in Pirate coin with your neighbour or
-   somebody on the otherside of the globe. In an age of unpresidented survailence Pirate
+   be able to figure out that you're transacting in ZDEEX coin with your neighbour or
+   somebody on the otherside of the globe. In an age of unpresidented survailence ZDEEX
    offers superior annonymity when a transaction is executed and leaves no visible 
    trace for analytics on the blockchain as a historic record.
    
 7. Summary
-   Pirate's Treasure Chest wallet gives you access to these features today:
+   ZDEEX's Treasure Chest wallet gives you access to these features today:
    * BIP39 master seed 
    * Split addresses between two wallets. The offline contains the private keys
      and the online the viewing and spending keys.
@@ -144,9 +144,9 @@ shortfalls:
    30GB of hard drive space. The internet link should run at 10mbps or faster. 
    The machines can run Linux, Mac OS X or MS Windows. For this tutorial Linux is used.
    
-2. You can obtain the software from the official Pirate website, Pirate.black:
-   https://pirate.black/wallets/treasure-chest or a source copy from GitHUB at
-   https://github.com/PirateNetwork/pirate 
+2. You can obtain the software from the official ZDEEX website, ZDEEX.black:
+   https://zdeex.black/wallets/treasure-chest or a source copy from GitHUB at
+   https://github.com/ZDEEX-COIN/zdeex 
    
    Furthermore, if you do not have a copy of the blockchain, you can download a 
    bootstrap file from the website too. At the time of writing (September 2022)
@@ -154,7 +154,7 @@ shortfalls:
    this file, but if the transfer gets interrupted you'll have to start from the 
    beginning again. With a utility like 'wget' you can use the resume option (-c) 
    to continue downloading. On a 10mbps link it takes about 4 hours to download.
-   Filename: ARRR-bootstrap.tar.gz
+   Filename: ZDEEX-bootstrap.tar.gz
         
 4 Online machine
 4.1 Installation
@@ -162,8 +162,8 @@ shortfalls:
    lets continue setting up the online machine
    
    If you've downloaded the Debian Linux install archive, install it as root user:
-   # dpkg -i pirate-qt-ubuntu1804-v5.5.1.deb
-   The application binary is installed in /usr/local/bin/pirate-qt
+   # dpkg -i zdeex-qt-ubuntu1804-v5.5.1.deb
+   The application binary is installed in /usr/local/bin/zdeex-qt
    
   Treasure chest will create two sub directories in your $HOME directory where all 
   the data is stored:
@@ -176,7 +176,7 @@ shortfalls:
         'dev' branch
 
 4.2 First run
-    From a terminal console, launch the application: pirate-qt
+    From a terminal console, launch the application: zdeex-qt
     The wallet will immediately start to download the zk-SNARKs network parameters.
     The download is 750mb and will be located in $HOME/.zcash-params
     On a 10mbps link it takes about 10 minutes to download.
@@ -190,7 +190,7 @@ shortfalls:
        The dialog asks if you want to download the blockchain bootstrap file
        or synchronise directy from the network peers nodes.
        Select 'Cancel' to synchronise the blockchain from peer nodes. 
-       We'll use the ARRR-bootstrap.tar.gz in the following steps.
+       We'll use the ZDEEX-bootstrap.tar.gz in the following steps.
        
     3. The mnemonic setup dialog appears. It asks how to initialise the mnemonic
        master seed of the wallet. Select 'Create new wallet'. 
@@ -235,14 +235,14 @@ shortfalls:
          $ rm -rf chainstate
     Extract the bootstrap archive, assuming that it's located in your ~/Downloads 
     directory:
-         $ tar -xvzf ~/Download/ARRR-bootstrap.tar.gz
+         $ tar -xvzf ~/Download/ZDEEX-bootstrap.tar.gz
     The 14GB archive takes about 3 minutes to extract. The extracted files and
     archive together takes up about 30 GB of harddrive space. Do not let your PC
     run out of HDD space while Treasure Chest is running, or the blockchain files
     will be corrupted.
 
 4.4 Second run
-    From a terminal console, run the application: pirate-qt
+    From a terminal console, run the application: zdeex-qt
     The main splash screen will show the verifications done on the blockchain data 
     as it loads it: 
       Loading guts
@@ -270,11 +270,11 @@ shortfalls:
    Copy the zcash parameters to ~/.zcash-params on the offline machine
    
    If you've downloaded the Debian Linux install archive, install it as root user:
-   # dpkg -i pirate-qt-ubuntu1804-v5.5.1.deb
-   The application binary is installed in /usr/local/bin/pirate-qt
+   # dpkg -i zdeex-qt-ubuntu1804-v5.5.1.deb
+   The application binary is installed in /usr/local/bin/zdeex-qt
   
 5.2 First run
-    From a terminal console, run the application: pirate-qt
+    From a terminal console, run the application: zdeex-qt
     The application will load the provided ZKsnark network parameters.
     
     With no config files in the ~/.komodo/PIRATE directory the application will ask
@@ -367,7 +367,7 @@ shortfalls:
 
    Note: The viewing key contains more data than only the public address. You share
    the public address, starting with 'zs1...', with people so that they can send
-   pirate coins to you. You use the extended viewing key to monitor the balance 
+   zdeex coins to you. You use the extended viewing key to monitor the balance 
    and transaction history of the address and to request offline transaction 
    signing for that address when you want to spend it's funds. This will only be 
    used in your online wallet.
@@ -402,7 +402,7 @@ shortfalls:
 1. Fund the new address
    You'll first need some funds on the address before we can illustrate how you
    authorise payments with the offline wallet. You'll need a friend to send you
-   some pirate coins or you'll need to purchase some Pirate coin on an exchange,
+   some zdeex coins or you'll need to purchase some ZDEEX coin on an exchange,
    like TradeOgre, and send the coins to your address.
 
    If you're using a Treasure chest wallet app, click on the Z-Send tab. Select
@@ -488,7 +488,7 @@ shortfalls:
    Paste the signed data ('sendrawtransaction') that you obtained from
    the offline wallet into the 'Signed transaction input' box.
    Press the Send transaction button. The window will close.
-   The transaction will be submitted to the pirate network for processing.
+   The transaction will be submitted to the zdeex network for processing.
    On the Transaction page you'll see the transaction in the history
    with the network confirmations shown next to the entry.
 
@@ -531,8 +531,8 @@ shortfalls:
               number for goods purchased.
    - CONFIRMATIONS - How many network confirmations must occur before the transaction
                      is deemed successful. It is safe to leave this at 1
-   - FEE    - How many coins you want to pay the pirate network backoffice in fees
-              for maintaining the pirate network. In the transaction text is is 
+   - FEE    - How many coins you want to pay the zdeex network backoffice in fees
+              for maintaining the zdeex network. In the transaction text is is 
               written as value.fraction, i.e. 0.0001
 
    It's best to construct the transaction in an external text editor and copy and
@@ -588,7 +588,7 @@ shortfalls:
    machine in step 3.2 above. Copy and paste the contents into the console. The command 
    starts with: sendrawtransaction ....
 
-   If the transaction is accepted it will be submitted to the pirate network for 
+   If the transaction is accepted it will be submitted to the zdeex network for 
    processing.
 
    Close the debug window. In the main application, click on the 'Transactions' button.

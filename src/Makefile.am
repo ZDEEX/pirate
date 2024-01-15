@@ -165,11 +165,11 @@ noinst_PROGRAMS =
 TESTS =
 
 #if BUILD_BITCOIND
-  bin_PROGRAMS += pirated
+  bin_PROGRAMS += zdeexd
 #endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += pirate-cli pirate-tx
+  bin_PROGRAMS += zdeex-cli zdeex-tx
 endif
 if ENABLE_WALLET
   bin_PROGRAMS += wallet-utility
@@ -318,7 +318,7 @@ BITCOIN_CORE_H = \
   wallet/crypter.h \
   wallet/db.h \
   wallet/rpcwallet.h \
-	wallet/rpcpiratewallet.h \
+	wallet/rpczdeexwallet.h \
   wallet/wallet.h \
 	wallet/wallet_fees.h \
   wallet/wallet_ismine.h \
@@ -461,7 +461,7 @@ libbitcoin_wallet_a_SOURCES = \
   cc/CCassetstx.cpp \
   cc/CCtx.cpp \
   wallet/rpcwallet.cpp \
-	wallet/rpcpiratewallet.cpp \
+	wallet/rpczdeexwallet.cpp \
   wallet/wallet.cpp \
 	wallet/wallet_fees.cpp \
   wallet/wallet_ismine.cpp \
@@ -613,16 +613,16 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-pirated_SOURCES = bitcoind.cpp
-pirated_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-pirated_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-pirated_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+zdeexd_SOURCES = bitcoind.cpp
+zdeexd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+zdeexd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+zdeexd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-pirated_SOURCES += bitcoind-res.rc
+zdeexd_SOURCES += bitcoind-res.rc
 endif
 
-pirated_LDADD = \
+zdeexd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -640,10 +640,10 @@ pirated_LDADD = \
   $(LIBCRYPTOCONDITIONS)
 
 if ENABLE_WALLET
-pirated_LDADD += $(LIBBITCOIN_WALLET)
+zdeexd_LDADD += $(LIBBITCOIN_WALLET)
 endif
 
-pirated_LDADD += \
+zdeexd_LDADD += \
 	$(LIBCJSON) \
   $(BOOST_LIBS) \
   $(BDB_LIBS) \
@@ -659,31 +659,31 @@ pirated_LDADD += \
   $(LIBCRYPTOCONDITIONS)
 
 # if TARGET_DARWIN
-# pirated_LDADD += libcc.dylib $(LIBSECP256K1)
+# zdeexd_LDADD += libcc.dylib $(LIBSECP256K1)
 # endif
 # if TARGET_WINDOWS
-# pirated_LDADD += libcc.dll $(LIBSECP256K1)
+# zdeexd_LDADD += libcc.dll $(LIBSECP256K1)
 # endif
 # if TARGET_LINUX
-# pirated_LDADD += libcc.so $(LIBSECP256K1)
+# zdeexd_LDADD += libcc.so $(LIBSECP256K1)
 # endif
 
 if ENABLE_PROTON
-pirated_LDADD += $(LIBBITCOIN_PROTON) $(PROTON_LIBS)
+zdeexd_LDADD += $(LIBBITCOIN_PROTON) $(PROTON_LIBS)
 endif
 
 # [+] Decker: use static linking for libstdc++.6.dylib, libgomp.1.dylib, libgcc_s.1.dylib
 if TARGET_DARWIN
-pirated_LDFLAGS += -static-libgcc
+zdeexd_LDFLAGS += -static-libgcc
 endif
 
 # bitcoin-cli binary #
-pirate_cli_SOURCES = bitcoin-cli.cpp
-pirate_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-pirate_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-pirate_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+zdeex_cli_SOURCES = bitcoin-cli.cpp
+zdeex_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+zdeex_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+zdeex_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 if TARGET_DARWIN
-pirate_cli_LDFLAGS += -static-libgcc
+zdeex_cli_LDFLAGS += -static-libgcc
 endif
 
 # wallet-utility binary #
@@ -700,10 +700,10 @@ endif
 endif
 
 if TARGET_WINDOWS
-pirate_cli_SOURCES += bitcoin-cli-res.rc
+zdeex_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-pirate_cli_LDADD = \
+zdeex_cli_LDADD = \
 	$(LIBBITCOIN_CLI) \
 	$(LIBUNIVALUE) \
 	$(LIBBITCOIN_UTIL) \
@@ -735,17 +735,17 @@ wallet_utility_LDADD = \
 endif
 
 # zcash-tx binary #
-pirate_tx_SOURCES = komodo-tx.cpp
-pirate_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-pirate_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-pirate_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+zdeex_tx_SOURCES = komodo-tx.cpp
+zdeex_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+zdeex_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+zdeex_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-pirate_tx_SOURCES += bitcoin-tx-res.rc
+zdeex_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
 # FIXME: Is libzcash needed for zcash_tx?
-pirate_tx_LDADD = \
+zdeex_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -758,7 +758,7 @@ pirate_tx_LDADD = \
   $(LIBZCASH_LIBS) \
   $(LIBCRYPTOCONDITIONS)
 
-pirate_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+zdeex_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # zcash protocol primitives #

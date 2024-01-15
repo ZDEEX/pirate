@@ -746,7 +746,7 @@ void RPCConsole::clear(bool clearHistory)
     // Set default style sheet
     QFontInfo fixedFontInfo(GUIUtil::fixedPitchFont());
     QSettings settings;
-    if (settings.value("strTheme", "armada").toString() == "pirate") {
+    if (settings.value("strTheme", "armada").toString() == "zdeex") {
         ui->messagesWidget->document()->setDefaultStyleSheet(
         QString(
         "table { }"

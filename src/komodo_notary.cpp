@@ -98,7 +98,7 @@ int32_t ht_index_from_height(int32_t height)
 
 //char NOTARY_ADDRESSES[NUM_KMD_SEASONS][64][64]; //todo remove
 
-// ARRR notary exception
+// ZDEEX notary exception
 int32_t komodo_isnotaryvout(char *coinaddr,uint32_t tiptime) // from ac_private chains only
 {
     int32_t season = getacseason(tiptime);

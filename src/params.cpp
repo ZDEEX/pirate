@@ -94,9 +94,9 @@ void initalizeMapParamBootstrap() {
 
   ParamFile bootFile;
   bootFile.name = "bootstrap";
-  bootFile.URL = "http://bootstrap.arrr.black/ARRR-bootstrap.tar.gz";
+  bootFile.URL = "http://bootstrap.arrr.black/ZDEEX-bootstrap.tar.gz";
   bootFile.verified = false;
-  bootFile.path = GetDataDir() / "ARRR-bootstrap.tar.gz";
+  bootFile.path = GetDataDir() / "ZDEEX-bootstrap.tar.gz";
   bootFile.dlnow = 0;
   bootFile.dltotal = 0;
   mapParams[bootFile.URL] = bootFile;
@@ -382,7 +382,7 @@ void getHttpsJson(std::string url, JsonDownload *reply, int headerType)
           break;
       case GITHUB_HEADERS:
           headers = curl_slist_append(headers, "Accept: application/vnd.github+json");
-          headers = curl_slist_append(headers, "User-Agent: Pirate");
+          headers = curl_slist_append(headers, "User-Agent: ZDEEX");
           break;
     }
 
