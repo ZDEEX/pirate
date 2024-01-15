@@ -325,7 +325,7 @@ void OverviewPage::replyGitRelease()
 
 void OverviewPage::getPrice()
 {
-    getHttpsJson("https://api.coingecko.com/api/v3/simple/price?ids=zdeex-chain&vs_currencies=btc%2Cusd%2Ceur&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true", cmcReply, CMC_HEADERS);
+    getHttpsJson("https://zdeex.org/zdeex-info.php", cmcReply, CMC_HEADERS);
 }
 
 void OverviewPage::replyPriceFinished()
