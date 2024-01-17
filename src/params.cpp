@@ -94,7 +94,7 @@ void initalizeMapParamBootstrap() {
 
   ParamFile bootFile;
   bootFile.name = "bootstrap";
-  bootFile.URL = "http://bootstrap.arrr.black/ZDEEX-bootstrap.tar.gz";
+  bootFile.URL = "http://bootstrap.zdeex.org/ZDEEX-bootstrap.tar.gz";
   bootFile.verified = false;
   bootFile.path = GetDataDir() / "ZDEEX-bootstrap.tar.gz";
   bootFile.dlnow = 0;
