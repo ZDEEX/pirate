@@ -1,5 +1,5 @@
 ## Sign a transaction in an offline wallet
-This README matches the behaviour of Treasure Chest v5.6
+This README matches the behaviour of ZDEEX GUI v5.6
 
 ## Introduction
 The problem with traditional wallets and how ZDEEX.black addresses these
@@ -62,7 +62,7 @@ shortfalls:
    As seen above, BIP39 guards against loosing access to your individual addresses.
    It however does not provide additional protection of loosing the actual wallet
    file to an attacker. 
-   On Treasure Chest the wallet file can be encrypted too. If an attacker obtains
+   On ZDEEX GUI the wallet file can be encrypted too. If an attacker obtains
    the wallet file, they will not be able to open it to get the master seed or 
    any of the address data.
    This file is password protected. Your security is based on choosing a long secure 
@@ -85,7 +85,7 @@ shortfalls:
    *  How do you view the transactions & balance of an offline address?
    *  How do you spend the funds in an offline address?
    
-   ZDEEX's Treasure Chest wallet overcomes these obstacles as follow:
+   ZDEEX's ZDEEX GUI wallet overcomes these obstacles as follow:
 
    Viewing the transaction history
    -------------------------------
@@ -116,7 +116,7 @@ shortfalls:
    
    Spend the funds of an extended viewing key
    ------------------------------------------
-   In Treasure Chest the online wallet can construct a transaction with only the viewing
+   In ZDEEX GUI the online wallet can construct a transaction with only the viewing
    key of the address. All the required blockchain inputs are contained in this transaction 
    request. With a memory stick the data is transferred to the offline machine. There the
    private key of the address authorises (signs) the transaction. The authorised
@@ -124,7 +124,7 @@ shortfalls:
    for processing.
    
 6. Communicatin
-   The Treasure Chest wallet supports encryption between the wallet application and the 
+   The ZDEEX GUI wallet supports encryption between the wallet application and the 
    network miner nodes. Your ISP and other information gatherers on the internet won't
    be able to figure out that you're transacting in ZDEEX coin with your neighbour or
    somebody on the otherside of the globe. In an age of unpresidented survailence ZDEEX
@@ -132,7 +132,7 @@ shortfalls:
    trace for analytics on the blockchain as a historic record.
    
 7. Summary
-   ZDEEX's Treasure Chest wallet gives you access to these features today:
+   ZDEEX's ZDEEX GUI wallet gives you access to these features today:
    * BIP39 master seed 
    * Split addresses between two wallets. The offline contains the private keys
      and the online the viewing and spending keys.
@@ -158,14 +158,14 @@ shortfalls:
         
 4 Online machine
 4.1 Installation
-   Now that you've got the Treasure chest software and blockchain bootstrap, 
+   Now that you've got the ZDEEX GUI software and blockchain bootstrap, 
    lets continue setting up the online machine
    
    If you've downloaded the Debian Linux install archive, install it as root user:
    # dpkg -i zdeex-qt-ubuntu1804-v5.5.1.deb
    The application binary is installed in /usr/local/bin/zdeex-qt
    
-  Treasure chest will create two sub directories in your $HOME directory where all 
+  ZDEEX GUI will create two sub directories in your $HOME directory where all 
   the data is stored:
       ~/.zcash-params  -- Contains ZKsnark network parameters
       ~/.komodo/ZDEEX -- Contains your wallet and the blockchain
@@ -206,7 +206,7 @@ shortfalls:
        
        Navigate to Settings, Encrypt wallet
        Enter a long secure password to encrypt your wallet. You'll need to
-       enter this password each time you launch Treasure Chest. Make sure it's
+       enter this password each time you launch ZDEEX GUI. Make sure it's
        something thats still practical for you to type.
        
        The display is locked. Press the unlock button and enter your password.
@@ -238,7 +238,7 @@ shortfalls:
          $ tar -xvzf ~/Download/ZDEEX-bootstrap.tar.gz
     The 14GB archive takes about 3 minutes to extract. The extracted files and
     archive together takes up about 30 GB of harddrive space. Do not let your PC
-    run out of HDD space while Treasure Chest is running, or the blockchain files
+    run out of HDD space while ZDEEX GUI is running, or the blockchain files
     will be corrupted.
 
 4.4 Second run
@@ -262,9 +262,9 @@ shortfalls:
       
 5 Offline machine
 5.1 Installation
-   The Treasure Chest wallet requires the ZKsnark network parameters.
+   The ZDEEX GUI wallet requires the ZKsnark network parameters.
    
-   From the online machine, transfer the Treasure Chest installation archive and
+   From the online machine, transfer the ZDEEX GUI installation archive and
    ~/.zcash-params to the offline machine using a memory stick.
 
    Copy the zcash parameters to ~/.zcash-params on the offline machine
@@ -305,7 +305,7 @@ shortfalls:
 
        Navigate to Settings, Encrypt wallet
        Enter a long secure password to encrypt your wallet. You'll need to
-       enter this password each time you launch Treasure Chest. Make sure it's
+       enter this password each time you launch ZDEEX GUI. Make sure it's
        something that's still practical for you to type.
        
        The display is locked. Press the unlock button and enter your password.       
@@ -319,19 +319,19 @@ shortfalls:
        to apply the new configuration.
        
 6. Backups
-   To backup your current setup, shut down Treasure Chest. Then proceed to backup
+   To backup your current setup, shut down ZDEEX GUI. Then proceed to backup
    the ~/.zcash-params and ~/.komodo directories.
-   If you ever extract these directories again and launch Treasure Chest you'll be
+   If you ever extract these directories again and launch ZDEEX GUI you'll be
    precisely at the state as when the backup was made. Then you'll just have to
-   wait for Treasure Chest to resynchronise with the blockchain and you're ready
+   wait for ZDEEX GUI to resynchronise with the blockchain and you're ready
    to make transactions again.
    
-7. Changes from the previous Treasure Chest version
+7. Changes from the previous ZDEEX GUI version
    Previously you had to manually edit the ZDEEX.conf file in the
    project home directory to enable the 'offline mode' of the 
    application. This was accomplished by setting the config entry:
    maxconnections=0.
-   With Treasure Chest 5.6 the configuration is done in the GUI.
+   With ZDEEX GUI 5.6 the configuration is done in the GUI.
    The config option is accessible from the Settings->Options menu,
    under the Wallet tab.
    
@@ -374,7 +374,7 @@ shortfalls:
 
 3. Import extended viewing key in the online wallet
    On the online PC, open the file containing the extended viewing key.
-   Copy the text of the viewing key. Launch the Treasure Chest application.
+   Copy the text of the viewing key. Launch the ZDEEX GUI application.
    Once it is operational, select File->Import viewing key
    A popup window will appear. Paste the text in the edit box and select OK
    The whole blockchain is scanned by the application to see if there were any funds
@@ -405,7 +405,7 @@ shortfalls:
    some zdeex coins or you'll need to purchase some ZDEEX coin on an exchange,
    like TradeOgre, and send the coins to your address.
 
-   If you're using a Treasure chest wallet app, click on the Z-Send tab. Select
+   If you're using a ZDEEX GUI wallet app, click on the Z-Send tab. Select
    an address from the Pay From dropdown that has some funds in it. Enter your 
    public address into the 'Pay To' edit box. This is your address starting with
    'zs1' and not the 'full viewing key' that starts with 'zxviews' Enter the 

@@ -4,6 +4,6 @@ Section: base
 Priority: optional
 Architecture: amd64
 Maintainer: Forge <cryptoforge.cc@protonmail.ch>
-Description: Treasure Chest is a full node UI wallet for ZDEEX.
- Treasure Chest is a full node UI wallet for ZDEEX. It comes with
+Description: ZDEEX GUI is a full node UI wallet for ZDEEX.
+ ZDEEX GUI is a full node UI wallet for ZDEEX. It comes with
  full support for shielded addresses and memos for ZDEEX.

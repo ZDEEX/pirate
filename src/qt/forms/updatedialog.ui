@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Treasure Chest Update</string>
+   <string>ZDEEX GUI Update</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

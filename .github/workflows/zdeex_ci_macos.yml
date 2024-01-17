@@ -33,6 +33,7 @@ jobs:
 
       - name: Build (macOS)
         run: |
+          export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
           ./zcutil/build-mac.sh -j4
           zip --junk-paths zdeex-osx src/zdeexd src/zdeex-cli
       - name: Upload zdeex-osx.zip as artifact

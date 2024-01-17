@@ -162,7 +162,7 @@ ZDEEXOceanGUI::ZDEEXOceanGUI(const PlatformStyle *_platformStyle, const NetworkS
     qApp->setPalette(newPal);
 
 
-    QString windowTitle = "Treasure Chest";
+    QString windowTitle = "ZDEEX GUI";
 #ifdef ENABLE_WALLET
     enableWallet = WalletModel::isWalletEnabled();
 #endif // ENABLE_WALLET
