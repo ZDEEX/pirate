@@ -1010,7 +1010,7 @@ void komodo_args(char *argv0)
         fprintf(stderr, "Cannot be STAKED and KMD notary at the same time!\n");
         StartShutdown();
     }
-SoftSetArg("-ac_name", std::string("ZDEEX"));
+SoftSetArg("-ac_name", std::string("ZDEEXTEST"));
 SoftSetArg("-ac_sapling", std::string("1"));
 SoftSetArg("-ac_reward", std::string("200000000"));
 SoftSetArg("-ac_blocktime", std::string("300"));
@@ -1022,14 +1022,8 @@ SoftSetArg("-ac_supply", std::string("100000"));
 SoftSetArg("-ac_private", std::string("1"));
 SoftSetArg("-ac_ccenable", std::string("228,234,235,236,241"));
 SoftSetArg("-ac_cclib", std::string("hush3"));
-SoftSetArg("-connect", std::string("194.226.49.236"));
-SoftSetArg("-addnode", std::string("89.23.106.224"));
 SoftSetArg("-addnode", std::string("95.163.229.113"));
 SoftSetArg("-addnode", std::string("194.58.109.170"));
-SoftSetArg("-addnode", std::string("89.23.106.203"));
-SoftSetArg("-connect", std::string("89.108.115.67"));
-SoftSetArg("-connect", std::string("193.17.92.111"));
-SoftSetArg("-connect", std::string("194.226.49.236"));
 SoftSetArg("-ac_pubkey", std::string("03abd1d20f8c7cf579d80788c1d4d23fcb10b04a4f01f43d2bf0aac6a51b05db0e"));
 	  std::string name = GetArg("-ac_name","");
     if ( argv0 != 0 )
