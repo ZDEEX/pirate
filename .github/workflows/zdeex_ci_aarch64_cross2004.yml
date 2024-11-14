@@ -61,7 +61,7 @@ jobs:
           name: zdeex-linux-aarch64
           path: ./zdeex-aarch64.zip
       - name: Upload zdeex-qt-aarch64.zip as artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: zdeex-qt-aarch64
           path: ./zdeex-qt-aarch64.zip
